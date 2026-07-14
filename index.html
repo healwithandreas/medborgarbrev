@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andreas Medborgarbrev – @healwithandreas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#0A0A08;--coal:#111110;--iron:#1C1C1A;--smoke:#2E2E2A;
+  --ash:#888880;--fog:#C0C0B8;--white:#F5F4EE;
+  --gold:#C8A030;--gold2:#E8C050;--sage:#3D6B3A;--sage2:#5A9A55;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--coal);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;}
+
+/* HERO */
+.hero{position:relative;width:100%;height:100vh;min-height:600px;overflow:hidden;}
+.slides{position:absolute;inset:0;}
+.slide{position:absolute;inset:0;background-size:90%;background-position:70% 25%;opacity:0;transition:opacity 1.8s ease-in-out;}
+.slide.active{opacity:1;}
+.hero-overlay{
+  position:absolute;inset:0;z-index:2;
+  background:linear-gradient(to bottom,rgba(10,10,8,.3) 0%,rgba(10,10,8,.1) 35%,rgba(10,10,8,.65) 75%,rgba(10,10,8,.97) 100%),
+             linear-gradient(to right,rgba(10,10,8,.55) 0%,transparent 55%);
+}
+.hero-content{
+  position:absolute;inset:0;z-index:3;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 7vw 8vh;max-width:860px;
+}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:0;animation:fadeUp .8s .4s ease forwards;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(44px,7.5vw,92px);font-weight:900;line-height:.96;color:var(--white);margin-bottom:20px;opacity:0;animation:fadeUp .9s .55s ease forwards;}
+.hero-title em{display:block;color:var(--gold);font-style:italic;font-weight:700;}
+.hero-sub{font-size:clamp(15px,2vw,18px);font-weight:300;color:rgba(245,244,238,.6);line-height:1.68;max-width:500px;margin-bottom:34px;opacity:0;animation:fadeUp .9s .7s ease forwards;}
+.hero-meta{display:flex;gap:32px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s .85s ease forwards;}
+.meta-item{border-left:2px solid var(--gold);padding-left:14px;}
+.meta-n{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.meta-l{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ash);margin-top:4px;}
+.hero-dots{position:absolute;bottom:28px;right:7vw;z-index:4;display:flex;gap:8px;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.28);cursor:pointer;transition:all .3s;}
+.dot.active{background:var(--gold);transform:scale(1.4);}
+
+/* INTRO */
+.intro{padding:80px 7vw;border-bottom:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:700px){.intro{grid-template-columns:1fr;gap:32px;padding:60px 6vw;}}
+.intro-text h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:700;line-height:1.15;color:var(--white);margin-bottom:16px;}
+.intro-text h2 span{color:var(--gold);}
+.intro-text p{font-size:15.5px;font-weight:300;color:rgba(245,244,238,.58);line-height:1.75;margin-bottom:12px;}
+.intro-steps{display:flex;flex-direction:column;gap:14px;}
+.step{display:flex;align-items:flex-start;gap:15px;padding:17px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;transition:border-color .2s;}
+.step:hover{border-color:rgba(200,160,48,.3);}
+.step-n{width:30px;height:30px;flex-shrink:0;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--black);}
+.step-text h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px;}
+.step-text p{font-size:12.5px;color:var(--ash);line-height:1.5;}
+
+/* LETTERS */
+.letters-section{padding:60px 7vw 100px;}
+.section-eyebrow{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,42px);font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.15;}
+.section-sub{font-size:15px;color:var(--ash);line-height:1.6;max-width:540px;margin-bottom:44px;}
+.letters-list{display:flex;flex-direction:column;gap:10px;}
+
+/* Card */
+.letter-card{background:var(--iron);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;transition:border-color .25s;}
+.letter-card:hover{border-color:rgba(200,160,48,.2);}
+.letter-card.open{border-color:rgba(200,160,48,.38);}
+.letter-header{display:flex;align-items:center;gap:15px;padding:20px 22px;cursor:pointer;user-select:none;}
+.letter-num{flex-shrink:0;width:34px;height:34px;border:1.5px solid rgba(200,160,48,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--gold);transition:all .25s;}
+.letter-card.open .letter-num{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.letter-header-text{flex:1;min-width:0;}
+.letter-tag{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ash);margin-bottom:3px;}
+.letter-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.letter-to-short{font-size:11.5px;color:var(--ash);margin-top:2px;}
+.letter-right{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.copy-badge{display:flex;align-items:center;gap:5px;background:rgba(200,160,48,.09);border:1px solid rgba(200,160,48,.18);border-radius:100px;padding:4px 11px;font-size:11px;color:var(--gold);font-weight:600;white-space:nowrap;}
+.copy-badge .count{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;}
+.toggle-icon{font-size:22px;color:var(--ash);transition:transform .3s;flex-shrink:0;line-height:1;}
+.letter-card.open .toggle-icon{transform:rotate(45deg);color:var(--gold);}
+
+/* Body */
+.letter-body{display:none;padding:0 22px 22px;}
+.letter-card.open .letter-body{display:block;}
+.recipients-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding-top:2px;}
+.recipient-chip{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--fog);}
+.copy-email-btn{background:none;border:none;cursor:pointer;color:var(--ash);font-size:12px;display:flex;align-items:center;gap:3px;transition:color .2s;font-family:'Inter',sans-serif;padding:0;}
+.copy-email-btn:hover{color:var(--gold);}
+.mail-box{background:var(--smoke);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px 22px;font-size:13px;line-height:1.78;color:rgba(245,244,238,.7);white-space:pre-wrap;max-height:300px;overflow-y:auto;font-family:'Inter',sans-serif;margin-bottom:14px;}
+.mail-box::-webkit-scrollbar{width:3px;}
+.mail-box::-webkit-scrollbar-thumb{background:var(--ash);border-radius:2px;}
+.mail-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.btn-copy-mail{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--black);border:none;border-radius:10px;padding:11px 22px;font-size:14px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.btn-copy-mail:hover{background:var(--gold2);transform:translateY(-1px);}
+.btn-copy-mail.copied{background:var(--sage2);color:white;}
+.btn-copy-all{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1.5px solid rgba(200,160,48,.35);color:var(--gold);border-radius:10px;padding:10px 20px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .2s;}
+.btn-copy-all:hover{border-color:var(--gold);background:rgba(200,160,48,.07);}
+.copy-hint{font-size:12px;color:var(--ash);line-height:1.5;}
+
+/* FOOTER */
+footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.footer-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);}
+.footer-text{font-size:12px;color:var(--ash);line-height:1.6;}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--sage2);color:white;padding:11px 22px;border-radius:100px;font-size:13.5px;font-weight:600;pointer-events:none;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:600px){
+  .letter-header{padding:14px 16px;}
+  .letter-body{padding:0 16px 16px;}
+  .copy-badge{display:none;}
+  .mail-actions{flex-direction:column;align-items:stretch;}
+  .btn-copy-mail,.btn-copy-all{justify-content:center;}
+  .hero-meta{gap:20px;}
+  .letter-title{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="slides" id="slides"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">@healwithandreas</p>
+    <h1 class="hero-title">Andreas<em>Medborgarbrev</em></h1>
+    <p class="hero-sub">Ett försök att göra förändring. Färdigskrivna brev till svenska myndigheter – om mat, skola, hälsa och ansvar. Kopiera, skicka, gör din röst hörd.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><div class="meta-n">8</div><div class="meta-l">Brev</div></div>
+      <div class="meta-item"><div class="meta-n" id="totalCopies">0</div><div class="meta-l">Gånger kopierat</div></div>
+      <div class="meta-item"><div class="meta-n">5</div><div class="meta-l">Myndigheter</div></div>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<section class="intro">
+  <div class="intro-text">
+    <h2>Varför skicka ett <span>myndighetsbrev?</span></h2>
+    <p>Myndigheter är skyldiga att svara på brev från medborgare. Ett personligt mail från en individ väger mer än en namnlista – det är en röst, inte en siffra.</p>
+    <p>Varje brev här är ett konkret och välformulerat ärende. Du kopierar texten, klistrar in i din mail-app och skickar till rätt mottagare. Tar under en minut.</p>
+  </div>
+  <div class="intro-steps">
+    <div class="step"><div class="step-n">1</div><div class="step-text"><h4>Öppna ett brev</h4><p>Klicka på det brev du vill skicka för att läsa det och se mottagare.</p></div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-text"><h4>Kopiera texten</h4><p>Tryck "Kopiera brev" – texten hamnar i ditt urklipp. Anpassa gärna.</p></div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-text"><h4>Skicka från din mail</h4><p>Kopiera mottagaradresserna, öppna din mail-app, klistra in och skicka.</p></div></div>
+  </div>
+</section>
+
+<section class="letters-section">
+  <p class="section-eyebrow">Alla brev</p>
+  <h2 class="section-title">Välj vad du vill lyfta</h2>
+  <p class="section-sub">Skicka ett eller alla sju. Varje brev är ett separat ärende till rätt myndighet.</p>
+  <div class="letters-list" id="lettersList"></div>
+</section>
+
+<footer>
+  <div class="footer-brand">@healwithandreas</div>
+  <div class="footer-text">Ett initiativ för ett friskare Sverige · Dela gärna sidan<br>Dina uppgifter sparas inte – allt sker i din egen mail-app</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const IMAGES=['IMG_3422.jpg','IMG_3424.jpg','IMG_3425.jpg','IMG_3426.jpg','IMG_3428.jpg','IMG_3430.jpg','IMG_3431.jpg','IMG_3432.jpg','IMG_3434.jpg','IMG_3437.jpg'];
+
+function getCounts(){try{return JSON.parse(localStorage.getItem('mc2')||'{}');}catch{return {};}}
+function increment(id){const c=getCounts();c[id]=(c[id]||0)+1;try{localStorage.setItem('mc2',JSON.stringify(c));}catch{}return c[id];}
+function totalCount(){return Object.values(getCounts()).reduce((a,b)=>a+b,0);}
+
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
+
+function renderLetters(){
+  const list=document.getElementById('lettersList');
+  const counts=getCounts();
+  list.innerHTML=LETTERS.map((l,i)=>{
+    const cnt=counts[l.id]||0;
+    const recips=l.recipients.map(r=>`<div class="recipient-chip"><span>${r.name}</span><button class="copy-email-btn" onclick="copyEmail(event,'${r.email}')">📋 ${r.email}</button></div>`).join('');
+    const safeBody=l.body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return `<div class="letter-card" id="card-${l.id}">
+      <div class="letter-header" onclick="toggleCard('${l.id}')">
+        <div class="letter-num">${i+1}</div>
+        <div class="letter-header-text">
+          <div class="letter-tag">${l.tag}</div>
+          <div class="letter-title">${l.title}</div>
+          <div class="letter-to-short">Till: ${l.toShort}</div>
+        </div>
+        <div class="letter-right">
+          <div class="copy-badge" id="badge-${l.id}"><span class="count" id="cnt-${l.id}">${cnt}</span><span>kopior</span></div>
+          <div class="toggle-icon">+</div>
+        </div>
+      </div>
+      <div class="letter-body">
+        <div class="recipients-row">${recips}</div>
+        <div class="mail-box">${safeBody}</div>
+        <div class="mail-actions">
+          <button class="btn-copy-mail" id="btn-${l.id}" onclick="copyMail('${l.id}')">📋 Kopiera brev</button>
+          <button class="btn-copy-all" onclick="copyAllEmails('${l.id}')">✉️ Kopiera alla mottagare</button>
+          <span class="copy-hint">Klistra in i din mail-app och tryck skicka.</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('totalCopies').textContent=totalCount();
+}
+
+function toggleCard(id){document.getElementById('card-'+id).classList.toggle('open');}
+
+function copyEmail(e,email){e.stopPropagation();navigator.clipboard.writeText(email).then(()=>showToast('✓ '+email+' kopierad!'));}
+
+function copyAllEmails(id){
+  const l=LETTERS.find(x=>x.id===id);
+  navigator.clipboard.writeText(l.recipients.map(r=>r.email).join(', ')).then(()=>showToast('✓ Alla mottagare kopierade!'));
+}
+
+function copyMail(id){
+  const l=LETTERS.find(x=>x.id===id);
+  navigator.clipboard.writeText(l.body).then(()=>{
+    const n=increment(id);
+    document.getElementById('cnt-'+id).textContent=n;
+    document.getElementById('totalCopies').textContent=totalCount();
+    const btn=document.getElementById('btn-'+id);
+    btn.textContent='✓ Kopierat!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 Kopiera brev';btn.classList.remove('copied');},2200);
+    showToast('✓ Brevet kopierat – klistra in i din mail-app!');
+  });
+}
+
+renderLetters();
+</script>
+</body>
+</html>
