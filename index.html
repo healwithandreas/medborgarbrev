@@ -127,7 +127,7 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
 </footer>
 <div class="toast" id="toast"></div>
 <script>
-const IMAGES=['IMG_3423.jpg','IMG_3426.jpg','IMG_3430.jpg','IMG_3435.jpg'];
+const IMAGES=['IMG_3423.jpg','IMG_3424.jpg','IMG_3425.jpg','IMG_3426.jpg','IMG_3427.jpg','IMG_3428.jpg','IMG_3429.jpg','IMG_3430.jpg','IMG_3431.jpg','IMG_3432.jpg','IMG_3433.jpg','IMG_3434.jpg','IMG_3435.jpg'];
 let cur=0;
 const slidesEl=document.getElementById('slides'),dotsEl=document.getElementById('heroDots');
 IMAGES.forEach((img,i)=>{
@@ -148,154 +148,304 @@ const LETTERS=[
    recipients:[{name:'IVO',email:'registrator@ivo.se'},{name:'Socialdepartementet',email:'s.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver till er med anledning av den nuvarande tillämpningen av patientdatalagen, som i praktiken innebär att varken vårdnadshavare eller barn mellan 13 och 15 år kan ta del av barnets patientjournal i sin helhet. Jag anser att detta utgör en allvarlig rättssäkerhetslucka.
+Jag skriver till er med anledning av den nuvarande tillämpningen av patientdatalagen, som i praktiken innebär att varken vårdnadshavare eller barn mellan 13 och 15 år kan ta del av barnets patientjournal i sin helhet. Detta skapar en oroande rättssäkerhetslucka som jag anser kräver omedelbar uppmärksamhet.
 
-Barn under 18 år saknar full legal handlingsförmåga och är beroende av sina vårdnadshavare för att tillvarata sina rättigheter. Trots detta stänger sekretessreglerna i praktiken ute vårdnadshavare från barnets journal – och barnet självt har heller inte full digital åtkomst via 1177. Det skapar ett vakuum där ingen part har full insyn.
+Bakgrund och problemet
+•  Barn under 18 år saknar full legal handlingsförmåga och är beroende av sina vårdnadshavare för att kunna tillvarata sina rättigheter.
+•  Trots detta tillämpas sekretessregler på ett sätt som i praktiken stänger ute vårdnadshavare från barnets journal om barnet bedöms ha uppnått en viss mognad.
+•  Barnet självt, i åldern 13–15 år, har heller inte full digital åtkomst via exempelvis 1177 eftersom dessa kräver e-legitimation som i praktiken begränsar åtkomsten.
+•  Detta skapar ett vakuum där ingen part har full insyn – vare sig barnet, föräldern eller i tillräcklig grad den ansvarige vårdgivaren.
 
-Sekretesskyddet har ett legitimt syfte – att skydda barn i utsatta situationer. Men när samma regeltillämpning drabbar familjer där inga sådana skäl föreligger, uppstår en rättsosäkerhet som drabbar barnet självt.
+Konsekvenser
+•  Föräldrar kan inte följa upp sin underåriga sons eller dotters vård, ordinationer eller diagnoser.
+•  Barn i en sårbar ålder lämnas utan stöd att förstå sin egen hälsoinformation.
+•  Risken för medicinska misstag, utebliven uppföljning och bristande kontinuitet ökar.
+•  Principen om barnets bästa, som slås fast i barnkonventionen och svensk lag, riskerar att sättas ur spel.
 
-Konsekvenser:
-• Föräldrar kan inte följa upp sin underåriges vård, ordinationer eller diagnoser.
-• Barn i en sårbar ålder lämnas utan stöd att förstå sin hälsoinformation.
-• Barnkonventionens princip om barnets bästa, som är svensk lag sedan 2020, riskerar att sättas ur spel.
-• Föräldrars möjlighet att tidigt identifiera om något är fel försvagas avsevärt.
+Mina frågor till er
+•  Hur motiverar IVO och Socialdepartementet denna tolkning av patientdatalagen i förhållande till barnkonventionens krav på barnets bästa?
+•  Vilka åtgärder vidtas för att säkerställa att vårdnadshavare kan utöva sitt omsorgsansvar även när sekretessregler tillämpas?
+•  Finns det planer på en översyn av regelverket för att klargöra barnets och vårdnadshavarens rättigheter i denna åldersgrupp?
 
-Mina frågor:
-1. Hur motiverar ni denna tolkning i förhållande till barnkonventionens krav på barnets bästa?
-2. Vilka åtgärder vidtas för att säkerställa att vårdnadshavare kan utöva sitt omsorgsansvar?
-3. Finns planer på en översyn av regelverket?
-4. Hur säkerställer IVO att vårdinrättningar tillämpar regelverket konsekvent och i barnets intresse?
+Jag är medveten om att sekretesskyddet syftar till att skydda barn i utsatta situationer. Det är ett viktigt skäl. Men när samma regler drabbar familjer där inga sådana skäl föreligger, uppstår en rättsosäkerhet som drabbar barnet. Jag uppmanar er att se över tillämpningen och kommunicera tydligare riktlinjer till vården.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Patientjournal för barn 13–15 år – frågor om rättssäkerhet
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'skola',tag:'Brev 2 · Skola',title:'Skolplikt & barns känslomässiga hälsa',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver med en fundamental fråga för barns hälsa och välmående: vem tar ansvar för att lära svenska barn att hantera sina känslor – och när sker detta systematiskt och evidensbaserat?
+Jag skriver till er med en fråga som jag anser är fundamental för barns hälsa, inlärning och psykiska välmående: vem tar ansvar för att lära svenska barn att hantera sina känslor – och när sker detta?
 
-Sverige har en av de högsta konsumtionerna av antidepressiva läkemedel bland unga i Europa. Psykisk ohälsa bland barn ökar stadigt. Skolan är i praktiken den enda institution som når alla barn, varje dag, under tolv år. Det är en unik möjlighet – och ett ansvar som inte utnyttjas fullt ut.
+Bakgrunden till mitt brev
+Sverige har en av de högsta konsumtionerna av antidepressiva läkemedel bland unga i Europa. Psykisk ohälsa bland barn och ungdomar ökar stadigt. Samtidigt lever vi i ett samhälle där föräldrar i allt större utsträckning saknar tid och ork att ge sina barn den känslomässiga vägledning de behöver – inte av brist på kärlek, utan av systemiska skäl: långa arbetsdagar, ekonomisk stress och en alltmer fragmenterad familjestruktur.
 
-Forskning är tydlig: barn som lär sig att namnge, förstå och reglera sina känslor i tidig ålder klarar sig bättre akademiskt, socialt och psykiskt som vuxna. Programmet RULER, utvecklat vid Yale Center for Emotional Intelligence, har i kontrollerade studier visat sig förbättra skolresultat och minska mobbning.
+Mina konkreta frågor och synpunkter
+•  Forskning visar tydligt att barn lär sig mest effektivt på förmiddagen. Trots detta saknas i många skolor en genomtänkt struktur för när teoretisk inlärning bör ske kontra rörelse, kreativitet och återhämtning. Hur tar Skolverket hänsyn till detta i sina riktlinjer?
+•  Vad gör den svenska skolan konkret och systematiskt för att lära barn i tidig ålder – från förskola och uppåt – att identifiera, uttrycka och hantera sina känslor? Finns det ett nationellt obligatoriskt program för detta?
+•  Skolplikten innebär att barn tillbringar en stor del av sin vakna tid i skolan. Med detta följer ett ansvar. Om hemmet inte kan fylla behovet av emotionell utbildning – och om psykisk ohälsa ökar – bör då skolan ta ett tydligare lagstadgat ansvar för social och emotionell träning?
+•  Barn behöver återhämtning. Läxor, prov och krav på fritiden inskränker på den tid barn behöver för att bearbeta intryck, leka fritt och återhämta sig. Hur balanserar Skolverket kravet på kunskapsinhämtning mot behovet av återhämtning?
+•  Hur säkerställer Skolinspektionen att skolor faktiskt lever upp till sitt uppdrag att stödja elevers psykiska hälsa – inte bara deras kunskapsutveckling?
 
-Mina frågor:
-1. Forskning visar att barn lär sig mest effektivt på förmiddagen. Hur tar Skolverket hänsyn till detta?
-2. Vad gör skolan konkret och systematiskt för att lära barn att identifiera och reglera sina känslor?
-3. Bör skolan ta ett tydligare lagstadgat ansvar för emotionell träning?
-4. Hur balanserar Skolverket kunskapsinhämtning mot behovet av återhämtning?
-5. Hur säkerställer Skolinspektionen att skolor stödjer elevers psykiska hälsa?
-6. Finns planer på att utbilda lärare i grundläggande emotionell pedagogik och andningsteknik?
+Jag är inte ute efter att avskaffa skolplikten. Jag lyfter frågan om vad skolplikten ska innehålla och vem som bär ansvaret för helheten. Ett samhälle som vill ha friska, välmående medborgare måste investera i barnens emotionella och psykiska grundkompetens – och det måste börja tidigt, systematiskt och med tydligt ansvar.
+Jag välkomnar ett svar på mina frågor och hoppas att dessa synpunkter kan bidra till en bredare diskussion om vad en god skolgång faktiskt innebär.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Skolans ansvar för barns emotionella hälsa – medborgarfrågor
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'hexan',tag:'Brev 3 · Mat & Kemi',title:'Ultraprocessad mat & dolda processningsämnen',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
 
-Sverige tillhör de länder i Europa med högst konsumtion av ultraprocessad mat. Forskning i The BMJ kopplar detta till ökad risk för hjärt-kärlsjukdom, diabetes, depression och ökad dödlighet.
+Jag skriver till er som privatperson med ett starkt intresse för folkhälsa och konsumenträttigheter. Sverige tillhör idag de länder i Europa med högst konsumtion av ultraprocessad mat. Detta är alarmerande mot bakgrund av den forskning som tydligt kopplar ultraprocessad mat till ökad risk för hjärt-kärlsjukdom, typ 2-diabetes, fetma, depression och vissa cancerformer.
 
-Jag vill specifikt lyfta hexan – ett petroleumbaserat lösningsmedel som används för att extrahera vegetabiliska oljor och som aldrig behöver deklareras på förpackningen.
+1. Varför tillåts försäljning av ultraprocessad mat med nuvarande reglering?
+Jag förstår att livsmedelsindustrin verkar inom EU:s regelverk och att Livsmedelsverket inte ensamt bestämmer vilka produkter som får säljas. Men som ansvarig myndighet för livsmedelssäkerhet och folkhälsa i Sverige: anser Livsmedelsverket att nuvarande reglering är tillräcklig för att skydda konsumenten, givet den tillgängliga forskningen om ultraprocessad mats hälsoeffekter?
 
-Fakta om hexan:
-• Klassas av CDC som ett neurotoxin vid kronisk exponering.
-• Hexanets metabolit 2,5-hexandion är påvisbar i urinen hos normalbefolkningen.
-• Inget tolerabelt dagligt intag (TDI) har fastställts av EFSA eller FDA.
-• Finns som restsubstans i vegetabiliska oljor, vegoburgare och proteinprodukter utan att konsumenten informeras.
-• Barn och gravida är särskilt känsliga för neurotoxiska ämnen.
+2. Processningsämnen som aldrig syns på förpackningen – specifikt hexan
+Det finns en kategori ämnen som kallas processningshjälpmedel och som används i livsmedelstillverkning men inte behöver deklareras på förpackningen eftersom de tekniskt sett inte klassas som ingredienser. Ett tydligt exempel är hexan – ett lösningsmedel baserat på petroleumraffinering som används för att extrahera olja ur sojabönor, solros och raps.
+•  Hexan klassas av CDC (USA) som ett neurotoxin och av EPA som ett luftförorenande ämne.
+•  Forskning publicerad i vetenskapliga tidskrifter visar att hexanets giftiga metabolit 2,5-hexandion påvisas i urinen hos normalbefolkningen.
+•  Inget tolerabelt dagligt intag (TDI) har fastställts av någon livsmedelsmyndighet för hexan i livsmedel.
+•  Trots detta finns hexan som restsubstans i vegetabiliska oljor, vegoburgare och proteinbars – utan att konsumenten informeras.
 
-Mina frågor:
-1. Anser Livsmedelsverket att nuvarande reglering är tillräcklig givet tillgänglig forskning?
-2. Har Livsmedelsverket genomfört en svensk riskbedömning av hexan som restsubstans?
-3. Är undantaget för processningshjälpmedel förenligt med konsumentens rätt till information?
-4. Vilka åtgärder vidtas för att kräva märkning eller begränsning?
+Mina frågor till Livsmedelsverket
+•  Har Livsmedelsverket genomfört eller beställt en svensk riskbedömning av hexan som restsubstans i livsmedel?
+•  Anser Livsmedelsverket att det nuvarande undantaget för processningshjälpmedel i märkningsreglerna är förenligt med konsumentens rätt till information och transparens?
+•  Vilka åtgärder vidtar Livsmedelsverket, ensamt eller inom EU, för att kräva märkning eller begränsning av sådana ämnen?
+
+Som konsument har jag rätt att veta vad min mat innehåller – även de ämnen som används i tillverkningsprocessen. Jag uppmanar Livsmedelsverket att ta ett tydligare ställning i denna fråga och verka för skärpta märkningskrav inom EU.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Ultraprocessad mat och dolda processningsämnen – frågor till Livsmedelsverket
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'pyramid',tag:'Brev 4 · Kostråd',title:'Matpyramiden och USA:s reviderade kostråd',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
 
-USA har nyligen reviderat sina officiella kostråd och frångått matpyramiden med kolhydrater som bas. En växande vetenskaplig konsensus visar att raffinerade kolhydrater och socker är primära drivkrafter bakom insulinresistens och fetma.
+Jag skriver till er med anledning av de kostråd som Livsmedelsverket kommunicerar till svenska befolkningen, i ljuset av den internationella och vetenskapliga debatt som nu pågår om matpyramidens grundstruktur.
 
-Metaanalyser i Annals of Internal Medicine och The Lancet visar att lågkolhydratkost är mer effektiv för metabol hälsa och att naturliga mättade fetter inte ökar risken för hjärt-kärlsjukdom i den utsträckning man tidigare trott.
+Bakgrund
+USA har nyligen reviderat sin officiella syn på kost och näring, bland annat genom att ifrågasätta den traditionella matpyramiden där kolhydrater utgjort basen. Denna förändring drivs av en växande vetenskaplig konsensus som visar att:
+•  Raffinerade kolhydrater och socker är primära drivkrafter bakom insulinresistens, typ 2-diabetes och fetma.
+•  Naturliga mättade fetter – från animaliska källor som ägg, smör och kött – inte är den hjärtkärlbov de länge utmålats som i befolkningsstudier med bristfällig metodologi.
+•  Protein och fett ger bättre mättnad, stabilare blodsocker och stöder hormonfunktion bättre än kolhydrattung kost.
+•  Den holistiska hälsovärlden – nutritionister, funktionsmedicinare och en stor del av den kliniska forskningen – har länge förespråkat en omvärdering av pyramiden.
 
-En artikel i JAMA Internal Medicine (Kearns et al., 2016) dokumenterade hur sockerindustrins finansiering systematiskt snedvridit kostforskning under decennier. Sverige har stigande förekomst av typ 2-diabetes och fetma – ändå baseras kostråden fortfarande på en kolhydrattung pyramid.
+Min fråga till Livsmedelsverket
+•  Mot bakgrund av att Sverige ligger i topp i Europa vad gäller konsumtion av ultraprocessad mat och har en allt sämre folkhälsa med stigande förekomst av typ 2-diabetes, fetma och hjärt-kärlsjukdom – varför väljer Livsmedelsverket att stå fast vid en matpyramid med kolhydrater som bas?
+•  Vilken vetenskaplig grund lutar sig Livsmedelsverket mot när man prioriterar spannmål och kolhydrater framför protein och naturliga fetter i sina kostråd?
+•  Hur förhåller sig Livsmedelsverket till den stora mängd forskning och klinisk erfarenhet som talar för en kostmodell med lägre kolhydrater och högre andel protein och fett?
+•  Finns det planer på att revidera de svenska kostråden i linje med den internationella vetenskapliga utvecklingen?
+•  Hur väger Livsmedelsverket industrins påverkan – via lobbying och finansiering av forskning – när kostråden utformas?
 
-Mina frågor:
-1. Vilken vetenskaplig grund lutar sig Livsmedelsverket mot när kolhydrater prioriteras som bas?
-2. Hur förhåller sig Livsmedelsverket till forskning som talar för lägre kolhydrater och mer naturligt fett?
-3. Hur vägs industrins påverkan när kostråden utformas?
-4. Finns planer på en oberoende vetenskaplig översyn av de svenska kostråden?
+Det handlar ytterst om folkhälsa. Om de kostråd som kommuniceras till svenska befolkningen bidrar till snarare än motverkar den ökande sjukdomsbördan, har Livsmedelsverket ett ansvar att omvärdera och kommunicera dessa med större öppenhet för ny kunskap.
+Jag välkomnar ett svar och hoppas att denna fråga kan initieras till en bredare och mer öppen diskussion.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Svenska kostråd och ny internationell forskning – begäran om översyn
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'hallbar',tag:'Brev 5 · Lantbruk & Mark',title:'Hållbart kosthållning & kväve i marken',toShort:'Jordbruksverket & Landsbygdsdepartementet',
    recipients:[{name:'Jordbruksverket',email:'jordbruksverket@jordbruksverket.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Det centrala problemet med matproduktion är inte vad vi äter – det är hur och var det produceras. Storskalig industriell matproduktion, oavsett om den är vegansk eller animalisk, utarmar jordbruksmark, förstör biologisk mångfald och är sårbar för globala störningar.
+Jag skriver till er med en mer övergripande fråga om riktningen för svensk mat- och jordbrukspolitik. Debatten om hållbar mat har länge dominerats av ett enda budskap: ät mindre kött, ät mer växtbaserat. Jag vill utmana denna förenklade bild och argumentera för en mer nyanserad, vetenskapligt förankrad och realistisk syn på vad hållbar mat faktiskt innebär för Sverige.
 
-Forskning visar att betande djur på naturbetesmark binder koldioxid och bevarar biologisk mångfald (Poore & Nemecek, Science, 2018). En svensk som äter lokalproducerat beteskött och svenska rotfrukter har sannolikt lägre klimatpåverkan än en vegan som äter importerad mandelmjölk och fabrikstillverkade köttsubstitut.
+Det centrala problemet är inte vad vi äter – det är hur och var det produceras.
 
-Kvävekretsloppet:
-Haber-Bosch-konstgödsel har ersatt naturliga kvävekällor – djurgödsel, klöver och levande mikrobiologi. Resultatet är alltmer utarmade jordar med ökat beroende av fossil tillförsel. Att återställa naturliga kväveförhållanden via betesdrift och växtföljd är möjligt – men kräver en politik som aktivt premierar det.
+Storskalig industriell matproduktion
+Storskalig industriell matproduktion – oavsett om den är vegansk eller animalisk – är det verkliga miljöproblemet. Den:
+•  Utarmar jordbruksmark via monokultur och konstgödsel baserat på fossila bränslen.
+•  Förstör biologisk mångfald när samma gröda odlas på tusentals hektar år efter år.
+•  Kräver enorma transportavstånd som genererar koldioxidutsläpp i varje led.
+•  Producerar upp till 30–40 procent matsvinn i kedjan från producent till konsument.
+•  Är sårbar för globala störningar – som vi såg tydligt under pandemin och i samband med geopolitiska kriser.
 
-Mina frågor:
-1. Varför subventioneras storskalig industriell produktion framför regenerativt och lokalproducerat jordbruk?
-2. Vilka åtgärder vidtas för att stärka det lokala och regenerativa lantbruket?
-3. Finns konkreta mål för att återställa naturliga kväveförhållanden i svensk jordbruksmark?
-4. Hur hanteras risken att klimatdebatten driver konsumenter mot globalt producerade produkter med hög faktisk miljöpåverkan?
+Vad forskningen faktiskt visar
+•  Betande djur på naturbetesmark binder koldioxid i marken och bevarar biologisk mångfald – det är inte klimatskadligt, det är klimatneutralt eller positivt vid rätt förvaltning.
+•  Djurgödsel är fundamentalt för levande jordar. Utan djuren i kretsloppet ersätts gödsel av konstgödsel – med fossilt ursprung och stor miljöpåverkan.
+•  Lokalproducerad mat i säsong har en dramatiskt lägre klimatpåverkan än importerad mat, oavsett om den är vegansk eller animalisk.
+•  En svensk som äter lokalproducerat kött från betesdrift och svenska rotfrukter har sannolikt lägre klimatpåverkan än en vegan som äter importerad mandelmjölk, avokado och fabrikstillverkade köttsubstitut.
+
+Kvävekretsloppet och markens naturliga återhämtning
+Kvävekretsloppet är en del av samma problem. Konstgödsel baserat på fossil energi, framställt via Haber-Bosch-processen, har under decennier ersatt de naturliga kvävekällor som en gång byggde upp svensk jordbruksmark – djurgödsel, kvävefixerande växter som klöver och baljväxter, samt en levande, mikrobiellt rik jord.
+Resultatet är jordar som blir alltmer utarmade och alltmer beroende av extern tillförsel av konstgödsel för att producera någonting alls. Detta är inte bara en klimatfråga – det är en fråga om markens långsiktiga bärkraft och Sveriges förmåga till självförsörjning.
+Att återställa naturliga kväveförhållanden genom växtföljd, fånggrödor, betesdrift och organiskt material i jorden är fullt möjligt – men kräver en jordbrukspolitik som aktivt premierar det, snarare än att enbart subventionera storskalig produktion baserad på konstgödsel.
+
+Mina konkreta frågor och uppmaningar
+•  Varför subventioneras storskalig industriell produktion framför regenerativt och lokalproducerat jordbruk i Sverige? Är det dags att styra om jordbruksstödet?
+•  Vilka konkreta åtgärder vidtas för att stärka det lokala, småskaliga och regenerativa lantbruket i Sverige – det som faktiskt kan bidra till bättre jordhälsa, biologisk mångfald och minskad klimatpåverkan?
+•  Finns konkreta mål eller strategier för att återställa naturliga kväveförhållanden i svensk jordbruksmark, snarare än fortsatt strukturellt beroende av konstgödsel?
+•  Hur verkar myndigheterna för att konsumenter ska kunna välja lokalproducerat och säsongsanpassat – praktiskt och ekonomiskt tillgängligt, inte bara som ett lyxval?
+•  Hur hanteras det faktum att den nuvarande klimatdebatten kring mat riskerar att driva konsumenter mot globalt producerade veganska produkter med hög faktisk miljöpåverkan?
+•  Vilken roll ges det svenska kulturlandskapet och betesmarken i den nationella klimat- och jordbruksstrategin? Betesmarker som inte betas försvinner – och med dem biologisk mångfald och koldioxidbindning.
+
+Sverige har alla förutsättningar att bli ett föregångsland inom regenerativt och hållbart jordbruk. Vi har mark, kompetens, ett starkt civilsamhälle och en befolkning med intresse för mat och hälsa. Det som saknas är en modigare och mer vetenskapligt grundad politik – som vågar utmana industrilobbyns intressen och sätta folkhälsa, ekosystem och självförsörjning först.
+Jag hoppas att dessa tankar kan bidra till en bredare diskussion och ser fram emot ert svar.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Hållbart kosthållning och regenerativt lantbruk – systemfrågor
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'livs',tag:'Brev 6 · Jäv',title:'Livsmedelspolitiska rådets sammansättning',toShort:'Livsmedelsverket & Landsbygdsdepartementet',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Bland aktörer som förekommer i rådgivande organ kring svensk livsmedelspolitik återfinns bolag som Coca-Cola, Cloetta, Orkla och Spendrups – vars kärnverksamhet bygger på socker, läsk och ultraprocessade produkter. Att dessa aktörer påverkar nationella kostråd utgör en uppenbar jävsproblematik. Det är jämförbart med att låta tobaksindustrin utforma rökavvänjningskampanjer.
+Jag skriver angående sammansättningen av Sveriges livsmedelspolitiska råd och vilka aktörer som ges plats att forma svensk kost- och hälsopolitik.
 
-En artikel i JAMA Internal Medicine (Kearns et al., 2016) dokumenterade hur livsmedelsindustrins finansiering systematiskt snedvridit kostpolitiken under decennier.
+Bakgrund och problemet
+Flera av de företag som idag är representerade i rådgivande organ kring svensk livsmedelspolitik tillverkar produkter som enligt etablerad forskning är direkt kopplade till ökad risk för fetma, typ 2-diabetes och hjärt-kärlsjukdom. Bland aktörer som förekommer i denna typ av sammanhang återfinns bolag som Coca-Cola, Cloetta, Orkla och Spendrups – företag vars kärnverksamhet bygger på försäljning av socker, läsk och ultraprocessade produkter.
+Att samma aktörer som tjänar ekonomiskt på hög konsumtion av dessa produkter samtidigt får vara med och påverka nationella kostråd, märkningsregler och folkhälsopolitik utgör en uppenbar jävsproblematik. Det är jämförbart med att låta tobaksindustrin sitta med och utforma rökavvänjningskampanjer.
 
-Mina frågor:
-1. Vilka kriterier styr vilka organisationer som bjuds in till livsmedelspolitiska rådgivande organ?
-2. Hur säkerställs att kommersiella intressen inte påverkar folkhälsorekommendationer?
-3. Finns en plan för att se över jävsreglerna kring rådets sammansättning?
-4. Kan en fullständig offentlig lista över rådets medlemmar och deras kommersiella kopplingar tillhandahållas?
-5. Finns planer på obligatoriska jävsdeklarationer liknande de vid läkemedelsmyndigheternas rådgivande organ?
+Varför detta spelar roll
+•  Kommersiella intressen riskerar att väga tyngre än oberoende forskning när kostråd och regleringar formuleras.
+•  Allmänhetens förtroende för myndigheternas kostrekommendationer undergrävs när industrinärvaron inte är transparent.
+•  Sverige har redan en stigande sjukdomsbörda kopplad till kost – typ 2-diabetes, fetma och hjärt-kärlsjukdom – vilket gör frågan om vems röst som väger tyngst i kostrådspolitiken ännu mer angelägen.
+
+Mina frågor
+•  Vilka kriterier styr vilka organisationer och företag som bjuds in att delta i livsmedelspolitiska rådgivande organ?
+•  Hur säkerställer Livsmedelsverket och regeringskansliet att kommersiella intressen inte otillbörligt påverkar nationella folkhälsorekommendationer?
+•  Finns en plan för att se över jävsreglerna kring sammansättningen av dessa råd, så att aktörer med direkt kommersiellt intresse i utfallet inte ges en rådgivande roll i frågor som rör deras egna produktkategorier?
+•  Kan en fullständig och offentligt tillgänglig lista över samtliga nuvarande medlemmar i relevanta råd samt deras kommersiella kopplingar tillhandahållas?
+
+Jag uppmanar er att genomföra en oberoende översyn av rådets sammansättning och stärka transparensen kring vilka intressen som får plats vid bordet när Sveriges kostpolitik formas. Folkhälsan bör inte formas av de aktörer som tjänar mest på att den uteblir.
+Med vänliga hälsningar,
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Jäv i livsmedelspolitiska rådgivande organ – begäran om transparens
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'skolmat',tag:'Brev 7 · Skolmat',title:'Skolmatens näringskvalitet',toShort:'Skolverket, Livsmedelsverket & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Barn tillbringar 10–12 år i skolan och äter minst ett mål mat om dagen där. Ändå upphandlas skolmat primärt på pris, inte näringskvalitet. USA:s reviderade kostråd (2025) betonar protein, naturliga fetter och mikronutrienttäta livsmedel – svensk skolmat baseras fortfarande på den gamla kolhydrattungapyramiden.
+Jag skriver till er med anledning av den svenska skolmatens näringskvalitet och de systemfel i upphandling och reglering som i dag gör att en stor andel svenska barn dagligen serveras mat som inte uppfyller deras grundläggande näringsbehov.
 
-Kritiska brister:
+Barn tillbringar 10–12 år i skolan och äter minst ett mål mat om dagen där. Det är ett av de mest kraftfulla folkhälsoinstrument ett samhälle förfogar över. Ändå upphandlas skolmat i dag primärt på pris, inte på näringskvalitet. Resultatet är mat som mättar men inte bygger – och barn som går till lektionerna med hjärnor och kroppar som saknar de råvaror de behöver för att fungera optimalt.
 
-B-vitaminer (B12, folat, B6): Essentiella för nervsystem och produktion av serotonin och dopamin. B12 finns uteslutande i animaliska livsmedel. Syntetisk folsyra kan hos barn med MTHFR-genvarianter – upp till 40% av befolkningen – störa folatmetabolismen.
 
-Järn: Hemjärn absorberas med 15–35%, icke-hemjärn med 2–8%. Ferritin under 30 µg/L innebär funktionell järnbrist med mätbart sämre kognitiv funktion.
+1. Systemfelet – upphandling på lägsta pris
+Den svenska skolmatens grundproblem är strukturellt. Kommunerna upphandlar måltidstjänster i konkurrens, och i avsaknad av tydliga näringskrav som faktiskt följs upp vinner det billigaste alternativet. Det leder till:
 
-Kolin: Fundamentalt för minne, inlärning och myelinisering. En äggula täcker 25–30% av ett barns dagsbehov. Ägget lyser med sin frånvaro i de flesta skolkök.
+Övervikt av billiga kolhydrater – vitt bröd, pasta, ris och potatis utgör basen i de flesta skolrätter.
+För lite protein av hög kvalitet – animaliskt protein med komplett aminosyraprofil ersätts av billiga vegetabiliska alternativ som inte täcker barns behov.
+Industriella vegetabiliska oljor istället för naturliga fetter – påverkar omega-6/omega-3-balansen negativt och driver inflammation.
+Minimalt med inälvsmat, ägg eller andra näringsdensa råvaror – trots att dessa är de mest kostnadseffektiva källorna till kritiska mikronäringsämnen.
+Processade halvfabrikat med låg näringsdensitet – som mättar kalorierna men inte mikronäringsbehovet.
 
-Kolesterol och hjärnhälsa: Forskning (Tierney et al., 2006) visar att över 50% av autistiska barn har kliniskt låga kolesterolnivåer. Hjärnan består till ca 60% av fett – kolesterol är förutsättning för synapsutveckling.
+USA:s nyligen reviderade kostråd (2025) har frångått den gamla matpyramiden med kolhydrater som bas och i stället betonat protein, naturliga fetter och mikronutrienttäta livsmedel. Forskningen bakom denna förändring har funnits tillgänglig i decennier. Svensk skolmat baseras fortfarande på den gamla pyramidens logik.
 
-Mina frågor:
-1. Varför upphandlas skolmat primärt på pris snarare än näringskvalitet?
-2. Vilka krav ställs på B-vitaminer, järn, kolin och folat – och hur följs dessa upp?
-3. Varför saknas lever, ägg, sardiner och smör i de flesta skolkök?
-4. Hur förhåller sig myndigheterna till forskning som kopplar lågt kolesterol till neurologisk problematik?
-5. Vad görs för att identifiera och åtgärda järnbrist och B12-brist hos skolbarn?
+2. Kritiska näringsbristerna i svensk skolmat
+Nedanstående ämnen är fundamentala för barns neurologiska utveckling, immunförsvar, energiproduktion och hormonella mognad. Samtliga är underkritiska i en typisk svensk skolmatsstat.
+
+B-vitaminer – nervsystem, energi och celldelning
+B-vitaminerna – särskilt B1 (tiamin), B6 (pyridoxin), B9 (folat) och B12 (kobalamin) – är essentiella för barnets nervsystem, kognitiva funktion och röda blodkroppar. B12 finns uteslutande i animaliska livsmedel. Folat är kritiskt för celldelning och DNAreparation. B6 krävs för produktion av serotonin och dopamin.
+
+B12-brist hos barn ger trötthet, koncentrationssvårigheter, neurologiska symptom och försenad utveckling.
+Folatbrist är vanligare än man tror – processade livsmedel är fattiga på folat, och syntesen av folsyra via vitamin B9 är komplex.
+B6-brist kopplas till depression, sömnproblem och sämre immunrespons hos barn.
+Bästa källorna: lever, ägg, fisk, kött, fullkornsprodukter – varav lever sticker ut som den enskilt mest näringsdensa råvaran per krona.
+
+Järn – syre, kognition och hormonproduktion
+Järnbrist är den vanligaste näringsbrist i världen och drabbar barn hårt. Hemjärn från animaliska källor absorberas med 15–35 procent effektivitet. Icke-hemjärn från vegetabiliska källor absorberas med 2–8 procent, och absorptionen hämmas ytterligare av fytater i spannmål.
+
+Järn krävs för syretransport till hjärnan – brist ger direkt sämre kognitiv funktion, koncentration och inlärningsförmåga.
+Serotonin, dopamin och noradrenalin kräver järn i syntesen – järnbrist ger humörpåverkan och ökad risk för depression.
+Sköldkörtelhormon (T3/T4) kräver järn – brist stör ämnesomsättning och energinivå.
+Ferritin under 30 µg/L innebär funktionell järnbrist även med normalt hemoglobin – ett mått som sällan kontrolleras hos skolbarn.
+Bästa källorna: nötlever, rött kött, sardiner – serverade med C-vitaminrik mat för optimal absorption.
+
+Kolin – hjärnans byggmaterial
+Kolin är ett essentiellt ämne som kroppen inte kan producera i tillräcklig mängd och som måste tillföras via kosten. Det är fundamentalt för:
+Acetykolinsyntesen – den viktigaste signalsubstansen för minne, inlärning och uppmärksamhet.
+Myelinisering – uppbyggnaden av de skyddande fettskidor som omger nervtrådarna och möjliggör snabb signalöverföring.
+Cellmembranens integritet – varje cell i kroppen behöver kolin för att fungera korrekt.
+Leverns fettomsättning – kolinbrist är en av orsakerna bakom icke-alkoholrelaterad fettlever, även hos barn.
+
+Bästa källorna: ägg (en äggula innehåller ~150 mg kolin, 25–30 procent av barns dagsbehov), lever, fisk, kött.
+Typisk skolmat: nära noll kolin. Ägget – den billigaste och mest kolinrika råvaran – lyser med sin frånvaro.
+
+Folat – celldelning, DNA och neurologisk utveckling
+Folat (B9 i naturlig form) är nödvändigt för DNAsyntes och celldelning – processer som är intensiva under barndomen och tonåren. Det är också kritiskt för produktionen av röda blodkroppar och för nervsystemets funktion.
+Folatbrist ger megaloblastisk anemi, trötthet och kognitiv nedgång.
+Folat samverkar med B12 i metyleringscykeln – brist på endera stör cyklern och påverkar humör, kognition och genpåverkan (epigenetik).
+Bästa källorna: lever (rikast av alla livsmedel), bladgrönsaker, baljväxter, ägg.
+Viktigt: syntetisk folsyra (i berikade livsmedel) är inte identisk med naturligt folat och kan hos barn med MTHFR-genvarianter (upp till 40 procent av befolkningen) faktiskt störa folatmetabolismen.
+
+3. Kolesterolets kritiska roll för barns hjärna
+Forskning visar att över 50 procent av autistiska barn har kliniskt låga kolesterolnivåer. Trots detta serveras barn i svenska skolor mat med minimalt naturligt kolesterol och med aktivt budskap om att undvika mättade fetter. Detta är en potentiellt allvarlig felriktning.
+
+Kolesterol är inte ett gift – det är ett av kroppens mest livsviktiga molekyler, och hjärnan är det organ som är mest beroende av det:
+
+Hjärnan består till ca 60 procent av fett, varav en stor del är kolesterol och myelinbildande fettsyror.
+Kolesterol är en förutsättning för synapsutveckling – utan kolesterol kan nervceller inte bygga de kopplingar som möjliggör inlärning och minne.
+Alla steroidhormoner – testosteron, östrogen, kortisol, DHEA – syntetiseras från kolesterol. En lågkolesterolkost under uppväxten stör den hormonella grundutvecklingen.
+Serotoninutsöndringen i hjärnan är delvis beroende av kolesterol i cellmembranet – lågt kolesterol kopplas i forskning till ökad impulsivitet och depression.
+Smith-Lemli-Opitz syndrom, en genetisk störning i kolesterolsyntesen, resulterar i svåra neurologiska skador – ett tydligt bevis på att kolesterol är essentiellt för hjärnans normala funktion.
+
+Trots detta baseras skolmatens fettideologi fortfarande på den gamla och ifrågasatta hypotesen att mättat fett är skadligt. Den hypotesen har inte stöd i moderna kohortstudier och metaanalyser, och den håller inte alls när det gäller barns hjärnor under aktiv utveckling.
+
+Forskning (Tierney et al., 2006; Aneja & Tierney, 2008) visar signifikant lägre kolesterolnivåer hos barn med autismspektrumstörning. En pilotstudie visade förbättrade beteendesymptom hos autistiska barn efter kolesterolsupplementering. Detta är inte ett argument för att behandla autism med kolesterol – det är ett argument för att inte aktivt begränsa kolesterol i mat till växande barn.
+
+Bästa källorna till naturligt kolesterol och hälsosamma mättade fetter: ägg, smör, lever, fet fisk, fullfett mejeriprodukter. Samtliga är prisvärda, näringsdensa och bör vara självklara inslag i en väloptimerad skolmat.
+
+4. Mina konkreta frågor och krav
+Varför upphandlas skolmat primärt på pris snarare än på näringskvalitet? Finns det planer på att ändra upphandlingsreglerna så att näringsdensitet väger tyngre?
+Hur ser Skolverket och Livsmedelsverket på den vetenskapliga forskning som ifrågasätter en kolhydrattung skolkost, inklusive USA:s reviderade kostråd från 2025?
+Vilka konkreta krav ställs i dag på halter av B-vitaminer, järn, kolin och folat i skolmaten – och hur följs dessa upp i praktiken?
+Varför saknas näringsdensa råvaror som lever, ägg, sardiner och smör i de flesta skolkök, trots att dessa är billiga och extremt näringsdensa?
+Hur förhåller sig myndigheterna till forskning som kopplar lågt kolesterol hos barn till neurologisk och psykiatrisk problematik? Finns det en beredskap att revidera kostideologin kring mättade fetter för barn?
+Vad görs konkret för att säkerställa att barn med järnbrist, B12-brist eller kolinbrist identifieras och får adekvat kost i skolan?
+
+Sverige satsar miljarder på skola, specialpedagogik och elevhälsa. Om vi inte adresserar grundproblemet – att hjärnorna vi försöker utbilda inte får de byggstenar de behöver – är resten av insatserna en kamp i motvind.
+
+Jag uppmanar Skolverket, Livsmedelsverket och Utbildningsdepartementet att ta denna fråga på allvar och inleda ett arbete för en evidensbaserad, näringsdensitetsoptimerad skolmat – för alla svenska barns skull.
+
+
+Utvalda källhänvisningar
+Tierney, E. et al. (2006). Behavior problems in children with autism, poor socialization, and low serum cholesterol. Research in Autism Spectrum Disorders.
+Aneja, A. & Tierney, E. (2008). Autism: the role of cholesterol in treatment. International Review of Psychiatry, 20(2), 165–170.
+Georgieff, M.K. (2007). Nutrition and the developing brain: nutrient priorities and measurement. American Journal of Clinical Nutrition, 85(2), 614S–620S.
+Zeisel, S.H. (2006). Choline: critical role during fetal development and dietary requirements in adults. Annual Review of Nutrition, 26, 229–250.
+Beard, J.L. (2001). Iron biology in immune function, muscle metabolism and neuronal functioning. Journal of Nutrition, 131(2S-2), 568S–580S.
+USDA Dietary Guidelines Advisory Committee (2025). Dietary Guidelines for Americans 2025–2030. U.S. Department of Agriculture.
 
 Med vänliga hälsningar,
-[Ditt namn]`},
+
+Med vänliga hälsningar,
+[Ditt namn]
+
+💡 Tips ämnesrad (anpassa gärna med din ort):
+Skolmatens näringskvalitet – ett systemfel som kräver åtgärd
+(t.ex. lägg till '– medborgare från [din stad]')`},
 
   {id:'rorelse',tag:'Brev 8 · Rörelse & Motorik',title:'Rörelse, motorik och andning i tidig ålder',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
