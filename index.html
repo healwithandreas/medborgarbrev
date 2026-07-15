@@ -11,6 +11,7 @@
   --black:#0A0A08;--coal:#111110;--iron:#1C1C1A;--smoke:#2E2E2A;
   --ash:#888880;--fog:#C0C0B8;--white:#F5F4EE;
   --gold:#C8A030;--gold2:#E8C050;--sage:#3D6B3A;--sage2:#5A9A55;
+  --sky:#2A5F7A;--purple:#6A3A8A;
 }
 html{scroll-behavior:smooth;}
 body{background:var(--coal);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;}
@@ -42,7 +43,7 @@ body{background:var(--coal);color:var(--white);font-family:'Inter',sans-serif;ov
 .step-n{width:30px;height:30px;flex-shrink:0;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--black);}
 .step-text h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px;}
 .step-text p{font-size:12.5px;color:var(--ash);line-height:1.5;}
-.letters-section{padding:60px 7vw 100px;}
+.letters-section{padding:60px 7vw 80px;}
 .section-eyebrow{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,42px);font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.15;}
 .section-sub{font-size:15px;color:var(--ash);line-height:1.6;max-width:540px;margin-bottom:44px;}
@@ -78,13 +79,53 @@ body{background:var(--coal);color:var(--white);font-family:'Inter',sans-serif;ov
 .btn-copy-all{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1.5px solid rgba(200,160,48,.35);color:var(--gold);border-radius:10px;padding:10px 20px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .2s;}
 .btn-copy-all:hover{border-color:var(--gold);background:rgba(200,160,48,.07);}
 .copy-hint{font-size:12px;color:var(--ash);line-height:1.5;}
-footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.sources-section{padding:60px 7vw 80px;background:rgba(42,95,122,.06);border-top:1px solid rgba(42,95,122,.15);}
+.sources-inner{max-width:940px;margin:0 auto;}
+.sources-list{display:flex;flex-direction:column;gap:10px;margin-top:44px;}
+.source-card{background:var(--iron);border:1px solid rgba(42,95,122,.2);border-radius:14px;overflow:hidden;transition:border-color .2s;}
+.source-card.reflection{border-color:rgba(106,58,138,.2);}
+.source-card:hover{border-color:rgba(42,95,122,.4);}
+.source-card.reflection:hover{border-color:rgba(106,58,138,.4);}
+.source-card.open{border-color:rgba(42,95,122,.5);}
+.source-card.reflection.open{border-color:rgba(106,58,138,.5);}
+.source-header{display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer;user-select:none;}
+.source-meta{flex:1;}
+.source-tag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:4px;display:block;}
+.source-card.reflection .source-tag{color:var(--purple);}
+.source-meta h3{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:3px;}
+.source-ref{font-size:11.5px;color:var(--ash);font-style:italic;}
+.source-toggle{font-size:22px;color:var(--ash);transition:transform .3s;flex-shrink:0;}
+.source-card.open .source-toggle{transform:rotate(45deg);color:var(--sky);}
+.source-card.reflection.open .source-toggle{color:var(--purple);}
+.source-body{display:none;padding:0 22px 20px;}
+.source-card.open .source-body{display:block;}
+.source-body p{font-size:13.5px;color:rgba(245,244,238,.65);line-height:1.7;margin-bottom:10px;}
+.source-verdict{font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:8px;display:inline-block;margin-top:4px;}
+.source-verdict.good{background:rgba(90,154,85,.15);color:#7ACA74;}
+.source-verdict.reflection-label{background:rgba(106,58,138,.15);color:#B07ACA;}
+footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start;}
+.footer-left{display:flex;flex-direction:column;gap:8px;}
 .footer-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);}
 .footer-text{font-size:12px;color:var(--ash);line-height:1.6;}
+.share-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.share-label{font-size:11px;color:var(--ash);font-weight:600;text-transform:uppercase;letter-spacing:.1em;}
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:9px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;border:none;transition:all .2s;}
+.share-btn.fb{background:#1877F2;color:white;}
+.share-btn.fb:hover{background:#166FE5;transform:translateY(-1px);}
+.share-btn.x{background:#000;color:white;border:1px solid rgba(255,255,255,.15);}
+.share-btn.x:hover{background:#222;transform:translateY(-1px);}
+.share-btn.cl{background:var(--iron);color:var(--white);border:1px solid rgba(255,255,255,.1);}
+.share-btn.cl:hover{background:var(--smoke);transform:translateY(-1px);}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--sage2);color:white;padding:11px 22px;border-radius:100px;font-size:13.5px;font-weight:600;pointer-events:none;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:600px){.letter-header{padding:14px 16px;}.letter-body{padding:0 16px 16px;}.copy-badge{display:none;}.mail-actions{flex-direction:column;align-items:stretch;}.btn-copy-mail,.btn-copy-all{justify-content:center;}.hero-meta{gap:20px;}.letter-title{font-size:14px;}}
+@media(max-width:600px){
+  .letter-header{padding:14px 16px;}.letter-body{padding:0 16px 16px;}
+  .copy-badge{display:none;}.mail-actions{flex-direction:column;align-items:stretch;}
+  .btn-copy-mail,.btn-copy-all{justify-content:center;}.hero-meta{gap:20px;}
+  .letter-title{font-size:14px;}.share-row{margin-top:4px;}
+  .source-header{padding:14px 16px;}
+}
 </style>
 </head>
 <body>
@@ -96,9 +137,9 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
     <h1 class="hero-title">Andreas<em>Medborgarbrev</em></h1>
     <p class="hero-sub">Ett försök att göra förändring. Färdigskrivna brev till svenska myndigheter – om mat, skola, hälsa och ansvar. Kopiera, skicka, gör din röst hörd.</p>
     <div class="hero-meta">
-      <div class="meta-item"><div class="meta-n">8</div><div class="meta-l">Brev</div></div>
+      <div class="meta-item"><div class="meta-n">9</div><div class="meta-l">Brev</div></div>
       <div class="meta-item"><div class="meta-n" id="totalCopies">0</div><div class="meta-l">Gånger kopierat</div></div>
-      <div class="meta-item"><div class="meta-n">5</div><div class="meta-l">Myndigheter</div></div>
+      <div class="meta-item"><div class="meta-n">6</div><div class="meta-l">Myndigheter</div></div>
     </div>
   </div>
   <div class="hero-dots" id="heroDots"></div>
@@ -116,14 +157,163 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
   </div>
 </section>
 <section class="letters-section">
-  <p class="section-eyebrow">Alla brev</p>
-  <h2 class="section-title">Välj vad du vill lyfta</h2>
-  <p class="section-sub">Skicka ett eller alla åtta. Varje brev är ett separat ärende till rätt myndighet.</p>
-  <div class="letters-list" id="lettersList"></div>
+  <div style="max-width:940px;margin:0 auto;">
+    <p class="section-eyebrow">Alla brev</p>
+    <h2 class="section-title">Välj vad du vill lyfta</h2>
+    <p class="section-sub">Skicka ett eller alla nio. Varje brev är ett separat ärende till rätt myndighet.</p>
+    <div class="letters-list" id="lettersList"></div>
+  </div>
+</section>
+<section class="sources-section">
+  <div class="sources-inner">
+    <p class="section-eyebrow">Vetenskaplig grund</p>
+    <h2 class="section-title">Källorna bakom breven</h2>
+    <p class="section-sub">Vissa brev bygger på granskad forskning med källhänvisningar. Andra är medborgerliga reflektioner och systemkritik baserade på personliga tankar om dagens samhälle – märkta nedan.</p>
+    <div class="sources-list">
+
+      <div class="source-card reflection">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 1 · Personlig reflektion</span>
+            <h3>Patientjournal för barn 13–15 år</h3>
+            <p class="source-ref">Baserat på personliga tankar om rättssäkerhet och barnets bästa</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Detta brev bygger på en medborgerlig reflektion om hur nuvarande regeltillämpning kring patientjournaler skapar ett vakuum där varken barn eller föräldrar har full insyn. Barnkonventionens princip om barnets bästa – som är svensk lag sedan 2020 – är det juridiska ankaret. Resten är en rimlig samhällskritik om hur skyddsregler kan slå fel.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – inte en direkt vetenskaplig källhänvisning</p>
+        </div>
+      </div>
+
+      <div class="source-card reflection">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 2 · Personlig reflektion</span>
+            <h3>Skolplikt & barns känslomässiga hälsa</h3>
+            <p class="source-ref">Baserat på personliga tankar om skolans roll i samhället</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Detta brev bygger på en samhällsreflektion om att skolan – som når alla barn varje dag i tolv år – är den enda institution med verklig räckvidd för att lära barn känslomässig kompetens. Det faktum att psykisk ohälsa bland unga ökar trots ökade resurser motiverar frågan om systemet adresserar rätt saker. RULER-programmet från Yale nämns som ett exempel på att evidensbaserade alternativ finns.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – inte en direkt vetenskaplig källhänvisning</p>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 3 · Forskning</span>
+            <h3>Ultraprocessad mat och hälsoeffekter</h3>
+            <p class="source-ref">Monteiro et al. – The BMJ &amp; Hall et al. (2019) – Cell Metabolism</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Metaanalyser i The BMJ kopplar ultraprocessad mat till ökad risk för fetma, typ 2-diabetes, hjärt-kärlsjukdom, depression och total dödlighet. En randomiserad kontrollerad studie av Hall et al. (2019) i Cell Metabolism visade att deltagare som fick ultraprocessad mat konsumerade i genomsnitt 500 kcal mer per dag och gick upp i vikt, jämfört med de som fick oprocessad mat – trots att de erbjöds lika mycket av båda.</p>
+          <p class="source-verdict good">✓ Starkt evidensunderlag. Cell Metabolism-studien är RCT – den starkaste studiedesignen.</p>
+        </div>
+      </div>
+
+      <div class="source-card reflection">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 4 · Personlig reflektion</span>
+            <h3>Matpyramiden och USA:s reviderade kostråd</h3>
+            <p class="source-ref">Baserat på personliga tankar om kostpolitik och industriinflytande</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Detta brev bygger på en samhällsreflektion om att svenska kostråd inte uppdateras i takt med internationell forskning, och att industriinflytande historiskt har snedvridit kostpolitiken. USA:s revidering av sina kostråd är ett faktum. Att ifrågasätta varför Sverige inte gör detsamma är en legitim medborgerlig fråga – om än inte en direkt källhänvisning till en specifik studie.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – Kearns et al. (2016, JAMA) stöder industriinflytandeargumentet i brev 6</p>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 6 · Forskning</span>
+            <h3>Sockerindustrins påverkan på kostforskning</h3>
+            <p class="source-ref">Kearns, Schmidt &amp; Glantz (2016) – JAMA Internal Medicine</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Forskarna vid UC San Francisco analyserade interna dokument från Sugar Research Foundation. Dokumenten visade att SRF 1965 finansierade en litteraturgenomgång vars syfte var att peka ut fett och kolesterol – inte socker – som orsakerna till hjärtsjukdom. SRF satte studiens syfte och fick ta del av utkast innan publicering – utan att detta redovisades för läsarna.</p>
+          <p class="source-verdict good">✓ Välunderbyggd. Peer-reviewed, JAMA Internal Medicine, citerad 287 gånger.</p>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 7 · Forskning</span>
+            <h3>Kolesterol och autismspektrumtillstånd</h3>
+            <p class="source-ref">Tierney et al. (2006) – American Journal of Medical Genetics, Johns Hopkins</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Forskare vid Johns Hopkins analyserade 100 blodprover från personer med autismspektrumtillstånd. Resultat: 19 av 100 (19%) hade kliniskt låga kolesterolnivåer – under 5:e percentilen för sin åldersgrupp. Sambandet mellan ASD och avvikande kolesterolmetabolism har bekräftats i flera uppföljningsstudier.</p>
+          <p class="source-verdict good">✓ Korrekt använt i brevet: "19% av 100 undersökta barn med ASD hade kliniskt låga kolesterolnivåer".</p>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 8 · Forskning</span>
+            <h3>BDNF, rörelse och inlärning hos barn</h3>
+            <p class="source-ref">Diamond (2000) – Psychological Review &amp; Rico et al. (2025) – Life</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Adele Diamond (2000) visade att lillhjärnan är djupt sammankopplad med prefrontala cortex och att motorisk träning stärker exekutiva funktioner som arbetsminne och impulskontroll. En systematisk genomgång av RCT-studier (Rico et al., 2025) visade att strukturerad fysisk träning kan öka BDNF-nivåer hos friska barn, med neuromotoriska aktiviteter som visar störst effekt.</p>
+          <p class="source-verdict good">✓ Biologiskt välunderbyggt med bred neurologisk konsensus.</p>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="source-meta">
+            <span class="source-tag">Brev 9 · Forskning</span>
+            <h3>P-piller och psykiskt välmående</h3>
+            <p class="source-ref">Zethraeus et al. (2017) – Fertility &amp; Sterility, Karolinska Institutet</p>
+          </div>
+          <div class="source-toggle">+</div>
+        </div>
+        <div class="source-body">
+          <p>Dubbelblind, placebokontrollerad studie från Karolinska Institutet. Friska unga kvinnor randomiserades till kombinerat p-piller eller placebo. Resultat: p-pillergruppen visade signifikant sänkt generellt välmående mätt med Psychological General Well-Being Index (PGWBI). Ingen signifikant ökning av depressiva symptom mättes separat, men det sammansatta välmåendet försämrades signifikant.</p>
+          <p class="source-verdict good">✓ Korrekt använt i brevet: "signifikant sänkt allmänt välmående (Zethraeus et al., 2017, Karolinska Institutet)".</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <footer>
-  <div class="footer-brand">@healwithandreas</div>
-  <div class="footer-text">Ett initiativ för ett friskare Sverige · Dela gärna sidan<br>Dina uppgifter sparas inte – allt sker i din egen mail-app</div>
+  <div class="footer-left">
+    <div class="footer-brand">@healwithandreas</div>
+    <div class="footer-text">Ett initiativ för ett friskare Sverige<br>Dina uppgifter sparas inte – allt sker i din egen mail-app</div>
+  </div>
+  <div class="share-row">
+    <span class="share-label">Dela sidan:</span>
+    <button class="share-btn fb" onclick="shareFacebook()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      Facebook
+    </button>
+    <button class="share-btn x" onclick="shareX()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X / Twitter
+    </button>
+    <button class="share-btn cl" onclick="shareLink()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      Kopiera länk
+    </button>
+  </div>
 </footer>
 <div class="toast" id="toast"></div>
 <script>
@@ -131,18 +321,13 @@ const IMAGES=['IMG_3423.jpg','IMG_3424.jpg','IMG_3425.jpg','IMG_3426.jpg','IMG_3
 let cur=0;
 const slidesEl=document.getElementById('slides'),dotsEl=document.getElementById('heroDots');
 IMAGES.forEach((img,i)=>{
-  const s=document.createElement('div');
-  s.className='slide'+(i===0?' active':'');
-  s.style.backgroundImage='url("./'+img+'")';
-  slidesEl.appendChild(s);
-  const d=document.createElement('div');
-  d.className='dot'+(i===0?' active':'');
-  d.addEventListener('click',()=>goTo(i));
-  dotsEl.appendChild(d);
+  const s=document.createElement('div');s.className='slide'+(i===0?' active':'');
+  s.style.backgroundImage='url("./'+img+'")';slidesEl.appendChild(s);
+  const d=document.createElement('div');d.className='dot'+(i===0?' active':'');
+  d.addEventListener('click',()=>goTo(i));dotsEl.appendChild(d);
 });
 function goTo(n){slidesEl.children[cur].classList.remove('active');dotsEl.children[cur].classList.remove('active');cur=n;slidesEl.children[cur].classList.add('active');dotsEl.children[cur].classList.add('active');}
 setInterval(()=>goTo((cur+1)%IMAGES.length),4500);
-
 const LETTERS=[
   {id:'journal',tag:'Brev 1 · Barn & Vård',title:'Patientjournal för barn 13–15 år',toShort:'IVO & Socialdepartementet',
    recipients:[{name:'IVO',email:'registrator@ivo.se'},{name:'Socialdepartementet',email:'s.registrator@regeringskansliet.se'}],
@@ -168,7 +353,6 @@ Mina frågor till er
 •  Finns det planer på en översyn av regelverket för att klargöra barnets och vårdnadshavarens rättigheter i denna åldersgrupp?
 
 Jag är medveten om att sekretesskyddet syftar till att skydda barn i utsatta situationer. Det är ett viktigt skäl. Men när samma regler drabbar familjer där inga sådana skäl föreligger, uppstår en rättsosäkerhet som drabbar barnet. Jag uppmanar er att se över tillämpningen och kommunicera tydligare riktlinjer till vården.
-Med vänliga hälsningar,
 
 Med vänliga hälsningar,
 [Ditt namn]
@@ -176,7 +360,6 @@ Med vänliga hälsningar,
 💡 Tips ämnesrad (anpassa gärna med din ort):
 Patientjournal för barn 13–15 år – frågor om rättssäkerhet
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
   {id:'skola',tag:'Brev 2 · Skola',title:'Skolplikt & barns känslomässiga hälsa',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
@@ -195,7 +378,6 @@ Mina konkreta frågor och synpunkter
 
 Jag är inte ute efter att avskaffa skolplikten. Jag lyfter frågan om vad skolplikten ska innehålla och vem som bär ansvaret för helheten. Ett samhälle som vill ha friska, välmående medborgare måste investera i barnens emotionella och psykiska grundkompetens – och det måste börja tidigt, systematiskt och med tydligt ansvar.
 Jag välkomnar ett svar på mina frågor och hoppas att dessa synpunkter kan bidra till en bredare diskussion om vad en god skolgång faktiskt innebär.
-Med vänliga hälsningar,
 
 Med vänliga hälsningar,
 [Ditt namn]
@@ -203,38 +385,41 @@ Med vänliga hälsningar,
 💡 Tips ämnesrad (anpassa gärna med din ort):
 Skolans ansvar för barns emotionella hälsa – medborgarfrågor
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
-  {id:'hexan',tag:'Brev 3 · Mat & Kemi',title:'Ultraprocessad mat & dolda processningsämnen',toShort:'Livsmedelsverket',
+  {id:'hexan',tag:'Brev 3 · Mat & Folkhälsa',title:'Ultraprocessad mat & konsumenttransparens',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
 
-Jag skriver till er som privatperson med ett starkt intresse för folkhälsa och konsumenträttigheter. Sverige tillhör idag de länder i Europa med högst konsumtion av ultraprocessad mat. Detta är alarmerande mot bakgrund av den forskning som tydligt kopplar ultraprocessad mat till ökad risk för hjärt-kärlsjukdom, typ 2-diabetes, fetma, depression och vissa cancerformer.
+Jag skriver till er som privatperson med ett starkt intresse för folkhälsa och konsumenträttigheter. Sverige tillhör idag de länder i Europa med högst konsumtion av ultraprocessad mat – och det syns i folkhälsostatistiken.
 
-1. Varför tillåts försäljning av ultraprocessad mat med nuvarande reglering?
-Jag förstår att livsmedelsindustrin verkar inom EU:s regelverk och att Livsmedelsverket inte ensamt bestämmer vilka produkter som får säljas. Men som ansvarig myndighet för livsmedelssäkerhet och folkhälsa i Sverige: anser Livsmedelsverket att nuvarande reglering är tillräcklig för att skydda konsumenten, givet den tillgängliga forskningen om ultraprocessad mats hälsoeffekter?
+Vad är ultraprocessad mat?
+Ultraprocessad mat definieras enligt NOVA-klassificeringen som industriellt framställda produkter som innehåller ingredienser som sällan eller aldrig används i hushållsmatlagning – som hydrolyserade proteiner, modifierad stärkelse, emulgeringsmedel, färgämnen, smakförstärkare och konstgjorda aromer. Det handlar inte om konserverad mat eller vanligt bröd – det handlar om produkter designade för att vara billiga att producera, svåra att sluta äta och lönsamma att sälja.
 
-2. Processningsämnen som aldrig syns på förpackningen – specifikt hexan
-Det finns en kategori ämnen som kallas processningshjälpmedel och som används i livsmedelstillverkning men inte behöver deklareras på förpackningen eftersom de tekniskt sett inte klassas som ingredienser. Ett tydligt exempel är hexan – ett lösningsmedel baserat på petroleumraffinering som används för att extrahera olja ur sojabönor, solros och raps.
-•  Hexan klassas av CDC (USA) som ett neurotoxin och av EPA som ett luftförorenande ämne.
-•  Forskning publicerad i vetenskapliga tidskrifter visar att hexanets giftiga metabolit 2,5-hexandion påvisas i urinen hos normalbefolkningen.
-•  Inget tolerabelt dagligt intag (TDI) har fastställts av någon livsmedelsmyndighet för hexan i livsmedel.
-•  Trots detta finns hexan som restsubstans i vegetabiliska oljor, vegoburgare och proteinbars – utan att konsumenten informeras.
+Vad forskningen visar:
+• En metaanalys publicerad i The BMJ (Monteiro et al.) kopplar ultraprocessad mat till ökad risk för fetma, typ 2-diabetes, hjärt-kärlsjukdom, depression och total dödlighet.
+• En studie i Cell Metabolism visade att personer som åt ultraprocessad mat konsumerade i genomsnitt 500 kilokalorier mer per dag jämfört med de som åt oprocessad mat – trots att de erbjöds lika mycket av båda.
+• Ultraprocessad mat är konstruerad för att kringgå kroppens naturliga mättnadssignaler via kombinationer av socker, fett, salt och textur som sällan förekommer i naturlig mat.
+• En stor del av den ultraprocessade maten riktar sig specifikt mot barn via smaksättning, förpackningsdesign och marknadsföring.
 
-Mina frågor till Livsmedelsverket
-•  Har Livsmedelsverket genomfört eller beställt en svensk riskbedömning av hexan som restsubstans i livsmedel?
-•  Anser Livsmedelsverket att det nuvarande undantaget för processningshjälpmedel i märkningsreglerna är förenligt med konsumentens rätt till information och transparens?
-•  Vilka åtgärder vidtar Livsmedelsverket, ensamt eller inom EU, för att kräva märkning eller begränsning av sådana ämnen?
+Systemproblemet – inte bara individens ansvar:
+Det är lätt att skylla på individens val. Men när en stor andel av kalorierna i en genomsnittlig svensk korg kommer från ultraprocessade produkter, och när dessa produkter aktivt är designade för att vara beroendeframkallande, handlar det inte längre om personligt ansvar. Det handlar om ett systemfel som kräver systemsvar.
 
-Som konsument har jag rätt att veta vad min mat innehåller – även de ämnen som används i tillverkningsprocessen. Jag uppmanar Livsmedelsverket att ta ett tydligare ställning i denna fråga och verka för skärpta märkningskrav inom EU.
-Med vänliga hälsningar,
+Frågan om transparens:
+Processningshjälpmedel – ämnen som används under tillverkning men inte räknas som ingredienser – behöver inte deklareras på förpackningen. Det innebär att konsumenten inte kan se hela bilden av vad som använts för att producera det de äter. Det strider mot grundläggande transparensprinciper.
+
+Mina frågor till Livsmedelsverket:
+1. Anser Livsmedelsverket att den nuvarande konsumtionsnivån av ultraprocessad mat i Sverige är ett folkhälsoproblem – och om ja, vilka åtgärder vidtas?
+2. Vilken vetenskaplig rådgivning ligger till grund för råden kring processad mat, och hur ofta uppdateras dessa?
+3. Hur ställer sig Livsmedelsverket till att ultraprocessad mat marknadsförs aktivt mot barn, och finns planer på reglering?
+4. Anser Livsmedelsverket att nuvarande märkningskrav för processningshjälpmedel är förenliga med konsumentens rätt till transparent information?
+5. Vilka åtgärder vidtar Livsmedelsverket inom EU-samarbetet för att stärka regleringen av ultraprocessad mat?
+
+Jag uppmanar Livsmedelsverket att ta ett tydligare och mer proaktivt ställning i denna fråga.
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Ultraprocessad mat och dolda processningsämnen – frågor till Livsmedelsverket
+💡 Tips ämnesrad: Ultraprocessad mat och folkhälsa – frågor till Livsmedelsverket
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
   {id:'pyramid',tag:'Brev 4 · Kostråd',title:'Matpyramiden och USA:s reviderade kostråd',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
@@ -257,7 +442,6 @@ Min fråga till Livsmedelsverket
 
 Det handlar ytterst om folkhälsa. Om de kostråd som kommuniceras till svenska befolkningen bidrar till snarare än motverkar den ökande sjukdomsbördan, har Livsmedelsverket ett ansvar att omvärdera och kommunicera dessa med större öppenhet för ny kunskap.
 Jag välkomnar ett svar och hoppas att denna fråga kan initieras till en bredare och mer öppen diskussion.
-Med vänliga hälsningar,
 
 Med vänliga hälsningar,
 [Ditt namn]
@@ -265,8 +449,7 @@ Med vänliga hälsningar,
 💡 Tips ämnesrad (anpassa gärna med din ort):
 Svenska kostråd och ny internationell forskning – begäran om översyn
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
-  {id:'hallbar',tag:'Brev 5 · Lantbruk & Mark',title:'Hållbart kosthållning & kväve i marken',toShort:'Jordbruksverket & Landsbygdsdepartementet',
+  {id:'hallbar',tag:'Brev 5 · Lantbruk & Mark',title:'Hållbart kosthållning & nordisk mixad kost',toShort:'Jordbruksverket & Landsbygdsdepartementet',
    recipients:[{name:'Jordbruksverket',email:'jordbruksverket@jordbruksverket.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
 
@@ -301,17 +484,17 @@ Mina konkreta frågor och uppmaningar
 •  Hur hanteras det faktum att den nuvarande klimatdebatten kring mat riskerar att driva konsumenter mot globalt producerade veganska produkter med hög faktisk miljöpåverkan?
 •  Vilken roll ges det svenska kulturlandskapet och betesmarken i den nationella klimat- och jordbruksstrategin? Betesmarker som inte betas försvinner – och med dem biologisk mångfald och koldioxidbindning.
 
-Sverige har alla förutsättningar att bli ett föregångsland inom regenerativt och hållbart jordbruk. Vi har mark, kompetens, ett starkt civilsamhälle och en befolkning med intresse för mat och hälsa. Det som saknas är en modigare och mer vetenskapligt grundad politik – som vågar utmana industrilobbyns intressen och sätta folkhälsa, ekosystem och självförsörjning först.
-Jag hoppas att dessa tankar kan bidra till en bredare diskussion och ser fram emot ert svar.
-Med vänliga hälsningar,
+Sverige har en unik möjlighet att visa att hållbart jordbruk inte handlar om att välja mellan djur och växter – utan om att producera rätt saker på rätt plats, på rätt sätt.
+
+Vi har ren natur och låg befolkningstäthet med betesdjur som har tillgång till naturbetesmark som i stora delar av världen redan är förstörd. Vi har en av världens strängaste djurskyddslagstiftningar. Vi har miljoner hektar naturbetesmark som riskerar att växa igen om djurhållningen minskar – mark som inte kan odla quinoa eller soja, men som kan bära betesdjur som producerar mat och bevarar biologisk mångfald. Vi har generationer av kunskap om regenerativt och blandat jordbruk som är svår att återskapa om den väl försvinner. Och vi har trovärdighet – ett litet land med höga standards och transparent livsmedelssystem har faktiskt möjlighet att bli en röst i den globala debatten om vad hållbar mat faktiskt innebär.
+
+Den möjligheten undergrävs aktivt av en jordbrukspolitik som driver mot stordrift, industrialisering och prispress – istället för att premiera det Sverige faktiskt är bra på.
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Hållbart kosthållning och regenerativt lantbruk – systemfrågor
+💡 Tips ämnesrad: Hållbart kosthållning och nordisk mixad kost – frågor till Jordbruksverket
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
   {id:'livs',tag:'Brev 6 · Jäv',title:'Livsmedelspolitiska rådets sammansättning',toShort:'Livsmedelsverket & Landsbygdsdepartementet',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
@@ -334,7 +517,6 @@ Mina frågor
 •  Kan en fullständig och offentligt tillgänglig lista över samtliga nuvarande medlemmar i relevanta råd samt deras kommersiella kopplingar tillhandahållas?
 
 Jag uppmanar er att genomföra en oberoende översyn av rådets sammansättning och stärka transparensen kring vilka intressen som får plats vid bordet när Sveriges kostpolitik formas. Folkhälsan bör inte formas av de aktörer som tjänar mest på att den uteblir.
-Med vänliga hälsningar,
 
 Med vänliga hälsningar,
 [Ditt namn]
@@ -342,7 +524,6 @@ Med vänliga hälsningar,
 💡 Tips ämnesrad (anpassa gärna med din ort):
 Jäv i livsmedelspolitiska rådgivande organ – begäran om transparens
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
   {id:'skolmat',tag:'Brev 7 · Skolmat',title:'Skolmatens näringskvalitet',toShort:'Skolverket, Livsmedelsverket & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
@@ -401,7 +582,7 @@ Bästa källorna: lever (rikast av alla livsmedel), bladgrönsaker, baljväxter,
 Viktigt: syntetisk folsyra (i berikade livsmedel) är inte identisk med naturligt folat och kan hos barn med MTHFR-genvarianter (upp till 40 procent av befolkningen) faktiskt störa folatmetabolismen.
 
 3. Kolesterolets kritiska roll för barns hjärna
-Forskning visar att över 50 procent av autistiska barn har kliniskt låga kolesterolnivåer. Trots detta serveras barn i svenska skolor mat med minimalt naturligt kolesterol och med aktivt budskap om att undvika mättade fetter. Detta är en potentiellt allvarlig felriktning.
+Forskning (Tierney et al., 2006, Johns Hopkins) visar att 19% av 100 undersökta barn med autismspektrumtillstånd hade kliniskt låga kolesterolnivåer – en signifikant avvikelse som väcker frågor om kostens roll i neurologisk utveckling. Trots detta serveras barn i svenska skolor mat med minimalt naturligt kolesterol och med aktivt budskap om att undvika mättade fetter. Detta är en potentiellt allvarlig felriktning.
 
 Kolesterol är inte ett gift – det är ett av kroppens mest livsviktiga molekyler, och hjärnan är det organ som är mest beroende av det:
 
@@ -439,25 +620,24 @@ Beard, J.L. (2001). Iron biology in immune function, muscle metabolism and neuro
 USDA Dietary Guidelines Advisory Committee (2025). Dietary Guidelines for Americans 2025–2030. U.S. Department of Agriculture.
 
 Med vänliga hälsningar,
-
-Med vänliga hälsningar,
 [Ditt namn]
 
 💡 Tips ämnesrad (anpassa gärna med din ort):
 Skolmatens näringskvalitet – ett systemfel som kräver åtgärd
 (t.ex. lägg till '– medborgare från [din stad]')`},
-
   {id:'rorelse',tag:'Brev 8 · Rörelse & Motorik',title:'Rörelse, motorik och andning i tidig ålder',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
 
 Jag skriver om en fråga som är fundamental för barns inlärning och psykiska välmående – och som i allt väsentligt ignoreras i hur den svenska skolan är utformad: rörelse, motorisk utveckling och andning i tidig ålder.
 
-Rörelse är inte ett avbrott från lärandet – det är en förutsättning för det. Lillhjärnan är djupt sammankopplad med prefrontala cortex och hippocampus. Forskning (Nicolson & Fawcett, 2007; Diamond, 2000) visar att barn med svag motorisk grund systematiskt presterar sämre i läsning och matematik. Fysisk aktivitet ökar produktionen av BDNF – ämnet som stimulerar tillväxt av nervceller och stärker synaptiska kopplingar.
+Rörelse är inte ett avbrott från lärandet – det är en förutsättning för det. Lillhjärnan är djupt sammankopplad med prefrontala cortex och hippocampus. Forskning (Nicolson & Fawcett, 2007; Diamond, 2000) visar att barn med svag motorisk grund systematiskt presterar sämre i läsning och matematik. Fysisk aktivitet ökar produktionen av BDNF – ett ämne som stimulerar tillväxt av nervceller och stärker synaptiska kopplingar, centralt för inlärning och minne.
 
-Motorisk utveckling: Korsrörelser aktiverar corpus callosum och är direkt kopplade till läsförmåga. Barn som fått för lite motorisk träning uppvisar ofta dyslexiliknande symptom, koncentrationssvårigheter och symptom som diagnosticeras som ADHD – men som kan vara uttryck för omogen vestibulär reglering.
+Motorisk utveckling:
+Korsrörelser – rörelser som involverar höger arm och vänster ben, eller vice versa – aktiverar corpus callosum och är direkt kopplade till läsförmåga och koncentration. Det kritiska fönstret för dessa motoriska grundmönster är 0–7 år. Skolan tar emot barn vid 6–7 år och sätter dem vid bänkar. Det är inte anpassat till barnets neurologiska verklighet. Barn som fått för lite motorisk träning uppvisar ofta symptom som diagnosticeras som ADHD – men som kan vara uttryck för omogen vestibulär reglering snarare än en neuropsykiatrisk diagnos.
 
-Andning: Långsam diafragmatisk andning aktiverar vagusnerven och sänker kortisol mätbart inom minuter. Andningsträning 5–10 min/dag har i kontrollerade studier gett förbättrad koncentration och minskad ångest hos barn. Det kostar ingenting och kräver ingen utrustning.
+Andning:
+Långsam diafragmatisk andning aktiverar vagusnerven och sänker kortisol mätbart inom minuter. Andningsträning 5–10 min per dag har i kontrollerade studier gett förbättrad koncentration och minskad ångest hos barn. Det kostar ingenting, kräver ingen utrustning och tar fem minuter.
 
 Mina frågor:
 1. Varför minskar schemalagd rörelsetid trots att forskningen visar att mer rörelse ger bättre akademiska resultat?
@@ -465,22 +645,65 @@ Mina frågor:
 3. Finns ett nationellt program för rörelsepedagogik och motorisk träning i förskola och lågstadiet?
 4. Hur förhåller sig Skolverket till forskning som kopplar otillräcklig motorisk träning till dyslexiliknande symptom och ADHD-diagnoser?
 5. Varför ingår inte grundläggande andningsteknik i läroplanens hälsoundervisning?
-6. Vilka åtgärder planeras för att ge lärare verktyg i rörelsepedagogik och andningstekniker?
+6. Vilka åtgärder planeras för att ge lärare verktyg i rörelsepedagogik och enkla andningstekniker?
+
+Sverige har en unik möjlighet att bli ett föregångsland där neurovetenskap och pedagogik möts. Det kräver att vi slutar behandla rörelse och andning som tillval – och börjar se dem som det de faktiskt är: biologiska grundkrav för ett lärande barn.
 
 Med vänliga hälsningar,
-[Ditt namn]`}
+[Ditt namn]
 
+💡 Tips ämnesrad: Rörelse, motorik och andning i skolan – medborgarfrågor
+(t.ex. lägg till '– medborgare från [din stad]')`},
+  {id:'ppiller',tag:'Brev 9 · Kvinnohälsa',title:'P-piller och rotorsaksbaserad kvinnovård',toShort:'Socialstyrelsen & Folkhälsomyndigheten',
+   recipients:[{name:'Socialstyrelsen',email:'socialstyrelsen@socialstyrelsen.se'},{name:'Folkhälsomyndigheten',email:'info@folkhalsomyndigheten.se'}],
+   body:`Hej,
+
+Jag skriver med en fråga som berör hundratusentals svenska flickor och unga kvinnor – och som sällan ställs öppet i den medicinska debatten: varför är p-piller förstahandsvalet vid mensvärk, oregelbunden mens, PCOS och endometrios hos unga flickor, snarare än en utredning av de bakomliggande orsakerna?
+
+En kropp byggd på en annan rytm:
+Kvinnans kropp fungerar enligt en 28-dagars cykel med fyra distinkta faser – var och en med sin egen hormonprofil, energinivå och kognitiva karaktär. Det samhälle unga flickor föds in i är inte byggt för denna rytm. Skolan, arbetslivet och samhällets prestationskrav bygger på en 24-timmars cykel – samma förmåga att leverera och prestera varje dag hela månaden. Det är inte en neutral struktur. Det är en struktur byggd runt en manlig biologisk rytm.
+
+P-piller plättar ut den kvinnliga cykeln och skapar en artificiell hormonell stabilitet. För samhällets produktivitetskrav är det en lösning. För flickans biologi är det en intervention med konsekvenser som sällan kommuniceras tydligt.
+
+Symptom som döljer rotorsaker:
+Smärtsam mens, PCOS och endometrios behandlas i svensk sjukvård övervägande med p-piller. Det är symptombehandling – inte rotorsaksbehandling. Forskning visar att dessa tillstånd ofta har identifierbara och påverkbara orsaker:
+• PCOS är i hög grad kopplat till insulinresistens och inflammation. Koständringar, sömnoptimering och stressreducering har i studier visat signifikanta effekter på symtom och hormonbalans – utan att stänga av den egna hormonproduktionen.
+• Endometrios är kopplat till systemisk inflammation och östrogendominans. Kostinterventioner med antiinflammatorisk profil och stöd för leverns östrogenmetabolism är underutforskade men lovande alternativ.
+• Smärtsam mens är i många fall kopplad till magnesiumbrist, D-vitaminbrist och omega-3-brist – alla med starkt vetenskapligt stöd för att minska mensvärk när de åtgärdas.
+
+Ingen av dessa rotorsaker utreds systematiskt innan p-piller skrivs ut.
+
+Vad som sällan berättas:
+En dubbelblind, placebokontrollerad studie från Karolinska Institutet (Zethraeus et al., 2017) visade att kombinerade p-piller signifikant sänkte det allmänna välmåendet hos friska unga kvinnor. Ändå är p-piller förstahandsvalet vid i stort sett alla menstruationsrelaterade besvär.
+
+Unga flickor och deras föräldrar får sällan information om att:
+• P-piller stänger av den egna hormonproduktionen via negativ feedbackhämning av hypofysen.
+• Det kan ta månader till år innan den egna cykeln normaliseras efter avslutad användning.
+• Den naturliga cykeln är en källa till biologisk information om kroppens hälsa – information som försvinner med p-pillret.
+• Det finns alternativa behandlingsvägar som adresserar rotorsakerna snarare än att dölja symptomen.
+
+Mina frågor:
+1. Varför är p-piller förstahandsvalet vid mensvärk, PCOS och endometrios – och inte en systematisk utredning av bakomliggande inflammatoriska, metabola eller nutritionella orsaker?
+2. Vilka riktlinjer finns för att informera unga flickor och deras vårdnadshavare om p-pillrets effekter på välmåendet och vad som händer vid avslutad användning?
+3. Hur förhåller sig myndigheterna till forskning som visar att livsstilsinterventioner kan ha signifikanta effekter på PCOS och mensvärk?
+4. Finns planer på nationella riktlinjer för rotorsaksutredning vid menstruationsrelaterade besvär hos unga, innan farmakologisk behandling initieras?
+5. Hur säkerställs att unga flickor ges ett genuint informerat samtycke – inklusive information om alternativa behandlingsvägar – innan p-piller skrivs ut?
+
+Sverige har möjlighet att bli ett föregångsland för en mer holistisk och rotorsaksbaserad kvinnohälsa. Det kräver att vi slutar behandla den kvinnliga biologin som ett problem att stabilisera – och börjar se den som det den är: ett komplext, informationsrikt system som förtjänar en vård som lyssnar snarare än tystar.
+
+Med vänliga hälsningar,
+[Ditt namn]
+
+💡 Tips ämnesrad: P-piller som förstahandsval vid mensvärk och PCOS – frågor om rotorsaksbaserad vård
+(t.ex. lägg till '– medborgare från [din stad]')`}
   // <-- LÄGG TILL NÄSTA BREV PRECIS OVANFÖR DENNA RAD
 ];
-
 function getCounts(){try{return JSON.parse(localStorage.getItem('mc2')||'{}');}catch{return{};}}
 function increment(id){const c=getCounts();c[id]=(c[id]||0)+1;try{localStorage.setItem('mc2',JSON.stringify(c));}catch{}return c[id];}
 function totalCount(){return Object.values(getCounts()).reduce((a,b)=>a+b,0);}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
-
 function renderLetters(){
-  const list=document.getElementById('lettersList');
-  const counts=getCounts();
+  const list=document.getElementById('lettersList');const counts=getCounts();
   list.innerHTML=LETTERS.map((l,i)=>{
     const cnt=counts[l.id]||0;
     const recips=l.recipients.map(r=>`<div class="recipient-chip"><span>${r.name}</span><button class="copy-email-btn" onclick="copyEmail(event,'${r.email}')">📋 ${r.email}</button></div>`).join('');
@@ -511,7 +734,6 @@ function renderLetters(){
   }).join('');
   document.getElementById('totalCopies').textContent=totalCount();
 }
-
 function toggleCard(id){document.getElementById('card-'+id).classList.toggle('open');}
 function copyEmail(e,email){e.stopPropagation();navigator.clipboard.writeText(email).then(()=>showToast('✓ '+email+' kopierad!'));}
 function copyAllEmails(id){const l=LETTERS.find(x=>x.id===id);navigator.clipboard.writeText(l.recipients.map(r=>r.email).join(', ')).then(()=>showToast('✓ Alla mottagare kopierade!'));}
@@ -527,6 +749,9 @@ function copyMail(id){
     showToast('✓ Brevet kopierat – klistra in i din mail-app!');
   });
 }
+function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');}
+function shareX(){window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent('Jag har skickat medborgarbrev till svenska myndigheter om mat, skola och hälsa. Gör du detsamma? @healwithandreas'),'_blank','width=600,height=400');}
+function shareLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('✓ Länk kopierad!'));}
 renderLetters();
 </script>
 </body>
