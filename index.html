@@ -7,12 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --black:#0A0A08;--coal:#111110;--iron:#1C1C1A;--smoke:#2E2E2A;
-  --ash:#888880;--fog:#C0C0B8;--white:#F5F4EE;
-  --gold:#C8A030;--gold2:#E8C050;--sage:#3D6B3A;--sage2:#5A9A55;
-  --sky:#2A5F7A;--purple:#6A3A8A;
-}
+:root{--black:#0A0A08;--coal:#111110;--iron:#1C1C1A;--smoke:#2E2E2A;--ash:#888880;--fog:#C0C0B8;--white:#F5F4EE;--gold:#C8A030;--gold2:#E8C050;--sage:#3D6B3A;--sage2:#5A9A55;--sky:#2A5F7A;--purple:#6A3A8A;}
 html{scroll-behavior:smooth;}
 body{background:var(--coal);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;}
 .hero{position:relative;width:100%;height:100vh;min-height:600px;overflow:hidden;}
@@ -119,13 +114,7 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--sage2);color:white;padding:11px 22px;border-radius:100px;font-size:13.5px;font-weight:600;pointer-events:none;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:600px){
-  .letter-header{padding:14px 16px;}.letter-body{padding:0 16px 16px;}
-  .copy-badge{display:none;}.mail-actions{flex-direction:column;align-items:stretch;}
-  .btn-copy-mail,.btn-copy-all{justify-content:center;}.hero-meta{gap:20px;}
-  .letter-title{font-size:14px;}.share-row{margin-top:4px;}
-  .source-header{padding:14px 16px;}
-}
+@media(max-width:600px){.letter-header{padding:14px 16px;}.letter-body{padding:0 16px 16px;}.copy-badge{display:none;}.mail-actions{flex-direction:column;align-items:stretch;}.btn-copy-mail,.btn-copy-all{justify-content:center;}.hero-meta{gap:20px;}.letter-title{font-size:14px;}.share-row{margin-top:4px;}.source-header{padding:14px 16px;}}
 </style>
 </head>
 <body>
@@ -168,129 +157,88 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
   <div class="sources-inner">
     <p class="section-eyebrow">Vetenskaplig grund</p>
     <h2 class="section-title">Källorna bakom breven</h2>
-    <p class="section-sub">Vissa brev bygger på granskad forskning med källhänvisningar. Andra är medborgerliga reflektioner och systemkritik baserade på personliga tankar om dagens samhälle – märkta nedan.</p>
+    <p class="section-sub">Vissa brev bygger på granskad forskning med källhänvisningar. Andra är medborgerliga reflektioner baserade på personliga tankar om dagens samhälle – märkta nedan.</p>
     <div class="sources-list">
-
       <div class="source-card reflection">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 1 · Personlig reflektion</span>
-            <h3>Patientjournal för barn 13–15 år</h3>
-            <p class="source-ref">Baserat på personliga tankar om rättssäkerhet och barnets bästa</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 1 · Personlig reflektion</span><h3>Patientjournal för barn 13–15 år</h3><p class="source-ref">Baserat på personliga tankar om rättssäkerhet och barnets bästa</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Detta brev bygger på en medborgerlig reflektion om hur nuvarande regeltillämpning kring patientjournaler skapar ett vakuum där varken barn eller föräldrar har full insyn. Barnkonventionens princip om barnets bästa – som är svensk lag sedan 2020 – är det juridiska ankaret. Resten är en rimlig samhällskritik om hur skyddsregler kan slå fel.</p>
-          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – inte en direkt vetenskaplig källhänvisning</p>
+          <p>Detta brev bygger på en medborgerlig reflektion om hur nuvarande regeltillämpning skapar ett vakuum där varken barn eller föräldrar har full insyn. Barnkonventionens princip om barnets bästa – svensk lag sedan 2020 – är det juridiska ankaret.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion</p>
         </div>
       </div>
-
       <div class="source-card reflection">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 2 · Personlig reflektion</span>
-            <h3>Skolplikt & barns känslomässiga hälsa</h3>
-            <p class="source-ref">Baserat på personliga tankar om skolans roll i samhället</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 2 · Personlig reflektion</span><h3>Skolplikt & barns känslomässiga hälsa</h3><p class="source-ref">Baserat på personliga tankar om skolans roll i samhället</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Detta brev bygger på en samhällsreflektion om att skolan – som når alla barn varje dag i tolv år – är den enda institution med verklig räckvidd för att lära barn känslomässig kompetens. Det faktum att psykisk ohälsa bland unga ökar trots ökade resurser motiverar frågan om systemet adresserar rätt saker. RULER-programmet från Yale nämns som ett exempel på att evidensbaserade alternativ finns.</p>
-          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – inte en direkt vetenskaplig källhänvisning</p>
+          <p>Detta brev bygger på en samhällsreflektion om att skolan är den enda institution med verklig räckvidd för att lära barn känslomässig kompetens. Det faktum att psykisk ohälsa bland unga ökar trots ökade resurser motiverar frågan om systemet adresserar rätt saker.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion</p>
         </div>
       </div>
-
       <div class="source-card">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 3 · Forskning</span>
-            <h3>Ultraprocessad mat och hälsoeffekter</h3>
-            <p class="source-ref">Monteiro et al. – The BMJ &amp; Hall et al. (2019) – Cell Metabolism</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 3 · Forskning</span><h3>Ultraprocessad mat och hälsoeffekter</h3><p class="source-ref">Monteiro et al. – The BMJ &amp; Hall et al. (2019) – Cell Metabolism</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Metaanalyser i The BMJ kopplar ultraprocessad mat till ökad risk för fetma, typ 2-diabetes, hjärt-kärlsjukdom, depression och total dödlighet. En randomiserad kontrollerad studie av Hall et al. (2019) i Cell Metabolism visade att deltagare som fick ultraprocessad mat konsumerade i genomsnitt 500 kcal mer per dag och gick upp i vikt, jämfört med de som fick oprocessad mat – trots att de erbjöds lika mycket av båda.</p>
+          <p>Metaanalyser i The BMJ kopplar ultraprocessad mat till ökad risk för fetma, typ 2-diabetes, hjärt-kärlsjukdom, depression och total dödlighet. Hall et al. (2019) i Cell Metabolism visade i en randomiserad studie att deltagare som åt ultraprocessad mat konsumerade 500 kcal mer per dag och gick upp i vikt jämfört med de som fick oprocessad mat.</p>
           <p class="source-verdict good">✓ Starkt evidensunderlag. Cell Metabolism-studien är RCT – den starkaste studiedesignen.</p>
         </div>
       </div>
-
       <div class="source-card reflection">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 4 · Personlig reflektion</span>
-            <h3>Matpyramiden och USA:s reviderade kostråd</h3>
-            <p class="source-ref">Baserat på personliga tankar om kostpolitik och industriinflytande</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 4 · Personlig reflektion</span><h3>Matpyramiden och svenska kostråd</h3><p class="source-ref">Baserat på personliga tankar om kostpolitik och industriinflytande</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Detta brev bygger på en samhällsreflektion om att svenska kostråd inte uppdateras i takt med internationell forskning, och att industriinflytande historiskt har snedvridit kostpolitiken. USA:s revidering av sina kostråd är ett faktum. Att ifrågasätta varför Sverige inte gör detsamma är en legitim medborgerlig fråga – om än inte en direkt källhänvisning till en specifik studie.</p>
-          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion – Kearns et al. (2016, JAMA) stöder industriinflytandeargumentet i brev 6</p>
+          <p>Detta brev bygger på en samhällsreflektion om att svenska kostråd inte uppdateras i takt med internationell forskning. USA:s revidering av sina kostråd är ett faktum. Industriinflytandeargumentet stöds av Kearns et al. (2016, JAMA) – se brev 6.</p>
+          <p class="source-verdict reflection-label">💭 Medborgerlig reflektion</p>
         </div>
       </div>
-
       <div class="source-card">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 6 · Forskning</span>
-            <h3>Sockerindustrins påverkan på kostforskning</h3>
-            <p class="source-ref">Kearns, Schmidt &amp; Glantz (2016) – JAMA Internal Medicine</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 6 · Forskning</span><h3>Sockerindustrins påverkan på kostforskning</h3><p class="source-ref">Kearns, Schmidt &amp; Glantz (2016) – JAMA Internal Medicine</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Forskarna vid UC San Francisco analyserade interna dokument från Sugar Research Foundation. Dokumenten visade att SRF 1965 finansierade en litteraturgenomgång vars syfte var att peka ut fett och kolesterol – inte socker – som orsakerna till hjärtsjukdom. SRF satte studiens syfte och fick ta del av utkast innan publicering – utan att detta redovisades för läsarna.</p>
+          <p>Forskarna vid UC San Francisco analyserade interna dokument från Sugar Research Foundation. Dokumenten visade att SRF 1965 finansierade en litteraturgenomgång vars syfte var att peka ut fett – inte socker – som orsaken till hjärtsjukdom. SRF satte studiens syfte och fick ta del av utkast innan publicering utan att detta redovisades.</p>
           <p class="source-verdict good">✓ Välunderbyggd. Peer-reviewed, JAMA Internal Medicine, citerad 287 gånger.</p>
         </div>
       </div>
-
       <div class="source-card">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 7 · Forskning</span>
-            <h3>Kolesterol och autismspektrumtillstånd</h3>
-            <p class="source-ref">Tierney et al. (2006) – American Journal of Medical Genetics, Johns Hopkins</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 7 · Forskning</span><h3>Kolesterol och autismspektrumtillstånd</h3><p class="source-ref">Tierney et al. (2006) – American Journal of Medical Genetics, Johns Hopkins</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Forskare vid Johns Hopkins analyserade 100 blodprover från personer med autismspektrumtillstånd. Resultat: 19 av 100 (19%) hade kliniskt låga kolesterolnivåer – under 5:e percentilen för sin åldersgrupp. Sambandet mellan ASD och avvikande kolesterolmetabolism har bekräftats i flera uppföljningsstudier.</p>
-          <p class="source-verdict good">✓ Korrekt använt i brevet: "19% av 100 undersökta barn med ASD hade kliniskt låga kolesterolnivåer".</p>
+          <p>Forskare vid Johns Hopkins analyserade 100 blodprover från personer med autismspektrumtillstånd. Resultat: 19 av 100 (19%) hade kliniskt låga kolesterolnivåer. Sambandet har bekräftats i flera uppföljningsstudier.</p>
+          <p class="source-verdict good">✓ Korrekt använt: "19% av 100 undersökta barn med ASD hade kliniskt låga kolesterolnivåer".</p>
         </div>
       </div>
-
       <div class="source-card">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 8 · Forskning</span>
-            <h3>BDNF, rörelse och inlärning hos barn</h3>
-            <p class="source-ref">Diamond (2000) – Psychological Review &amp; Rico et al. (2025) – Life</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 8 · Forskning</span><h3>BDNF, rörelse och inlärning hos barn</h3><p class="source-ref">Diamond (2000) – Psychological Review &amp; Rico et al. (2025) – Life</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Adele Diamond (2000) visade att lillhjärnan är djupt sammankopplad med prefrontala cortex och att motorisk träning stärker exekutiva funktioner som arbetsminne och impulskontroll. En systematisk genomgång av RCT-studier (Rico et al., 2025) visade att strukturerad fysisk träning kan öka BDNF-nivåer hos friska barn, med neuromotoriska aktiviteter som visar störst effekt.</p>
+          <p>Adele Diamond (2000) visade att lillhjärnan är djupt sammankopplad med prefrontala cortex och att motorisk träning stärker exekutiva funktioner. En systematisk genomgång av RCT-studier (Rico et al., 2025) visade att strukturerad fysisk träning kan öka BDNF-nivåer hos barn.</p>
           <p class="source-verdict good">✓ Biologiskt välunderbyggt med bred neurologisk konsensus.</p>
         </div>
       </div>
-
       <div class="source-card">
         <div class="source-header" onclick="this.parentElement.classList.toggle('open')">
-          <div class="source-meta">
-            <span class="source-tag">Brev 9 · Forskning</span>
-            <h3>P-piller och psykiskt välmående</h3>
-            <p class="source-ref">Zethraeus et al. (2017) – Fertility &amp; Sterility, Karolinska Institutet</p>
-          </div>
+          <div class="source-meta"><span class="source-tag">Brev 9 · Forskning</span><h3>P-piller och psykiskt välmående</h3><p class="source-ref">Zethraeus et al. (2017) – Fertility &amp; Sterility, Karolinska Institutet</p></div>
           <div class="source-toggle">+</div>
         </div>
         <div class="source-body">
-          <p>Dubbelblind, placebokontrollerad studie från Karolinska Institutet. Friska unga kvinnor randomiserades till kombinerat p-piller eller placebo. Resultat: p-pillergruppen visade signifikant sänkt generellt välmående mätt med Psychological General Well-Being Index (PGWBI). Ingen signifikant ökning av depressiva symptom mättes separat, men det sammansatta välmåendet försämrades signifikant.</p>
-          <p class="source-verdict good">✓ Korrekt använt i brevet: "signifikant sänkt allmänt välmående (Zethraeus et al., 2017, Karolinska Institutet)".</p>
+          <p>Dubbelblind, placebokontrollerad studie från Karolinska Institutet. Friska unga kvinnor randomiserades till kombinerat p-piller eller placebo. P-pillergruppen visade signifikant sänkt generellt välmående mätt med Psychological General Well-Being Index.</p>
+          <p class="source-verdict good">✓ Korrekt använt: "signifikant sänkt allmänt välmående (Zethraeus et al., 2017, Karolinska Institutet)".</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -301,31 +249,17 @@ footer{padding:36px 7vw;border-top:1px solid rgba(255,255,255,.06);display:flex;
   </div>
   <div class="share-row">
     <span class="share-label">Dela sidan:</span>
-    <button class="share-btn fb" onclick="shareFacebook()">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      Facebook
-    </button>
-    <button class="share-btn x" onclick="shareX()">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      X / Twitter
-    </button>
-    <button class="share-btn cl" onclick="shareLink()">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-      Kopiera länk
-    </button>
+    <button class="share-btn fb" onclick="shareFacebook()"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg> Facebook</button>
+    <button class="share-btn x" onclick="shareX()"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X / Twitter</button>
+    <button class="share-btn cl" onclick="shareLink()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Kopiera länk</button>
   </div>
 </footer>
 <div class="toast" id="toast"></div>
 <script>
-const IMAGES=['IMG_3425.jpg','IMG_3428.jpg','IMG_3430.jpg',,'IMG_3432.jpg','IMG_3434.jpg',];
+const IMAGES=['IMG_3423.jpg','IMG_3424.jpg','IMG_3425.jpg','IMG_3426.jpg','IMG_3427.jpg','IMG_3428.jpg','IMG_3429.jpg','IMG_3430.jpg','IMG_3431.jpg','IMG_3432.jpg','IMG_3433.jpg','IMG_3434.jpg','IMG_3435.jpg'];
 let cur=0;
 const slidesEl=document.getElementById('slides'),dotsEl=document.getElementById('heroDots');
-IMAGES.forEach((img,i)=>{
-  const s=document.createElement('div');s.className='slide'+(i===0?' active':'');
-  s.style.backgroundImage='url("./'+img+'")';slidesEl.appendChild(s);
-  const d=document.createElement('div');d.className='dot'+(i===0?' active':'');
-  d.addEventListener('click',()=>goTo(i));dotsEl.appendChild(d);
-});
+IMAGES.forEach((img,i)=>{const s=document.createElement('div');s.className='slide'+(i===0?' active':'');s.style.backgroundImage='url("./'+img+'")';slidesEl.appendChild(s);const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.addEventListener('click',()=>goTo(i));dotsEl.appendChild(d);});
 function goTo(n){slidesEl.children[cur].classList.remove('active');dotsEl.children[cur].classList.remove('active');cur=n;slidesEl.children[cur].classList.add('active');dotsEl.children[cur].classList.add('active');}
 setInterval(()=>goTo((cur+1)%IMAGES.length),4500);
 const LETTERS=[
@@ -333,298 +267,164 @@ const LETTERS=[
    recipients:[{name:'IVO',email:'registrator@ivo.se'},{name:'Socialdepartementet',email:'s.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver till er med anledning av den nuvarande tillämpningen av patientdatalagen, som i praktiken innebär att varken vårdnadshavare eller barn mellan 13 och 15 år kan ta del av barnets patientjournal i sin helhet. Detta skapar en oroande rättssäkerhetslucka som jag anser kräver omedelbar uppmärksamhet.
+Jag skriver om något som jag tror många föräldrar inte ens vet är ett problem förrän de stöter på det: barn mellan 13 och 15 år hamnar i ett märkligt vakuum när det gäller den egna journalen. Varken barnet eller föräldern har full insyn. Det kan låta som en liten detalj – men i praktiken kan det betyda att ingen vuxen följer upp vad som faktiskt händer i ett barns vård.
 
-Bakgrund och problemet
-•  Barn under 18 år saknar full legal handlingsförmåga och är beroende av sina vårdnadshavare för att kunna tillvarata sina rättigheter.
-•  Trots detta tillämpas sekretessregler på ett sätt som i praktiken stänger ute vårdnadshavare från barnets journal om barnet bedöms ha uppnått en viss mognad.
-•  Barnet självt, i åldern 13–15 år, har heller inte full digital åtkomst via exempelvis 1177 eftersom dessa kräver e-legitimation som i praktiken begränsar åtkomsten.
-•  Detta skapar ett vakuum där ingen part har full insyn – vare sig barnet, föräldern eller i tillräcklig grad den ansvarige vårdgivaren.
+Jag förstår att det finns ett syfte med sekretesskyddet. I familjer där barnet behöver skyddas från sina föräldrar är det viktigt. Men det är inte de flesta familjers verklighet. För de allra flesta innebär det här regelverket att engagerade föräldrar hindras från att göra sitt jobb – att se till att deras barn får rätt vård och uppföljning.
 
-Konsekvenser
-•  Föräldrar kan inte följa upp sin underåriga sons eller dotters vård, ordinationer eller diagnoser.
-•  Barn i en sårbar ålder lämnas utan stöd att förstå sin egen hälsoinformation.
-•  Risken för medicinska misstag, utebliven uppföljning och bristande kontinuitet ökar.
-•  Principen om barnets bästa, som slås fast i barnkonventionen och svensk lag, riskerar att sättas ur spel.
+Barnkonventionen slår fast att barnets bästa alltid ska komma i första hand. Jag ifrågasätter om ett regelverk där ingen part har full insyn i ett barns hälsa verkligen lever upp till det.
 
-Mina frågor till er
-•  Hur motiverar IVO och Socialdepartementet denna tolkning av patientdatalagen i förhållande till barnkonventionens krav på barnets bästa?
-•  Vilka åtgärder vidtas för att säkerställa att vårdnadshavare kan utöva sitt omsorgsansvar även när sekretessregler tillämpas?
-•  Finns det planer på en översyn av regelverket för att klargöra barnets och vårdnadshavarens rättigheter i denna åldersgrupp?
-
-Jag är medveten om att sekretesskyddet syftar till att skydda barn i utsatta situationer. Det är ett viktigt skäl. Men när samma regler drabbar familjer där inga sådana skäl föreligger, uppstår en rättsosäkerhet som drabbar barnet. Jag uppmanar er att se över tillämpningen och kommunicera tydligare riktlinjer till vården.
+Mina frågor:
+1. Hur motiveras denna tolkning av regelverket i förhållande till barnets bästa?
+2. Vilka åtgärder finns för att säkerställa att engagerade föräldrar kan fullgöra sitt omsorgsansvar?
+3. Finns det planer på att se över hur reglerna tillämpas i praktiken?
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Patientjournal för barn 13–15 år – frågor om rättssäkerhet
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Patientjournal för barn 13–15 år – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'skola',tag:'Brev 2 · Skola',title:'Skolplikt & barns känslomässiga hälsa',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver till er med en fråga som jag anser är fundamental för barns hälsa, inlärning och psykiska välmående: vem tar ansvar för att lära svenska barn att hantera sina känslor – och när sker detta?
+Jag skriver om en fråga som jag tror att många föräldrar funderar på men sällan vet vart de ska rikta: vem lär egentligen svenska barn att hantera sina känslor?
 
-Bakgrunden till mitt brev
-Sverige har en av de högsta konsumtionerna av antidepressiva läkemedel bland unga i Europa. Psykisk ohälsa bland barn och ungdomar ökar stadigt. Samtidigt lever vi i ett samhälle där föräldrar i allt större utsträckning saknar tid och ork att ge sina barn den känslomässiga vägledning de behöver – inte av brist på kärlek, utan av systemiska skäl: långa arbetsdagar, ekonomisk stress och en alltmer fragmenterad familjestruktur.
+Psykisk ohälsa bland unga ökar. Det pratas mycket om det – men lösningarna verkar ofta handla om att lägga till resurser efteråt, snarare än att bygga rätt från början. Skolan når alla barn, varje dag, i tolv år. Det är ett unikt tillfälle som jag inte tycker vi använder fullt ut.
 
-Mina konkreta frågor och synpunkter
-•  Forskning visar tydligt att barn lär sig mest effektivt på förmiddagen. Trots detta saknas i många skolor en genomtänkt struktur för när teoretisk inlärning bör ske kontra rörelse, kreativitet och återhämtning. Hur tar Skolverket hänsyn till detta i sina riktlinjer?
-•  Vad gör den svenska skolan konkret och systematiskt för att lära barn i tidig ålder – från förskola och uppåt – att identifiera, uttrycka och hantera sina känslor? Finns det ett nationellt obligatoriskt program för detta?
-•  Skolplikten innebär att barn tillbringar en stor del av sin vakna tid i skolan. Med detta följer ett ansvar. Om hemmet inte kan fylla behovet av emotionell utbildning – och om psykisk ohälsa ökar – bör då skolan ta ett tydligare lagstadgat ansvar för social och emotionell träning?
-•  Barn behöver återhämtning. Läxor, prov och krav på fritiden inskränker på den tid barn behöver för att bearbeta intryck, leka fritt och återhämta sig. Hur balanserar Skolverket kravet på kunskapsinhämtning mot behovet av återhämtning?
-•  Hur säkerställer Skolinspektionen att skolor faktiskt lever upp till sitt uppdrag att stödja elevers psykiska hälsa – inte bara deras kunskapsutveckling?
+Barn som lär sig att förstå och hantera sina känslor tidigt mår bättre, lär sig bättre och klarar motgångar bättre. Det finns beprövade program som visar att det faktiskt fungerar – att det går att undervisa i känslomässig kompetens på samma sätt som man undervisar i matte eller svenska. Det är inte flum. Det är något som gör skillnad.
 
-Jag är inte ute efter att avskaffa skolplikten. Jag lyfter frågan om vad skolplikten ska innehålla och vem som bär ansvaret för helheten. Ett samhälle som vill ha friska, välmående medborgare måste investera i barnens emotionella och psykiska grundkompetens – och det måste börja tidigt, systematiskt och med tydligt ansvar.
-Jag välkomnar ett svar på mina frågor och hoppas att dessa synpunkter kan bidra till en bredare diskussion om vad en god skolgång faktiskt innebär.
+Skolan är också den plats som kan fånga upp barn vars hem inte ger dem de verktygen. Inte för att föräldrar är dåliga – utan för att livet ser ut som det gör.
+
+Mina frågor:
+1. Finns det idag något nationellt och obligatoriskt program för att lära barn att hantera sina känslor – och om inte, varför?
+2. Hur balanserar Skolverket kunskapskrav mot behovet av återhämtning och emotionell träning?
+3. Hur säkerställer Skolinspektionen att skolor faktiskt tar ansvar för elevers psykiska välmående?
+4. Finns planer på att ge lärare konkreta verktyg för att arbeta med barns känsloliv i vardagen?
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Skolans ansvar för barns emotionella hälsa – medborgarfrågor
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Skolans ansvar för barns emotionella hälsa – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'hexan',tag:'Brev 3 · Mat & Folkhälsa',title:'Ultraprocessad mat & konsumenttransparens',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
 
-Jag skriver till er som privatperson med ett starkt intresse för folkhälsa och konsumenträttigheter. Sverige tillhör idag de länder i Europa med högst konsumtion av ultraprocessad mat – och det syns i folkhälsostatistiken.
+Jag skriver om något som jag tror de flesta svenskar inte tänker på när de handlar mat – men kanske borde.
 
-Vad är ultraprocessad mat?
-Ultraprocessad mat definieras enligt NOVA-klassificeringen som industriellt framställda produkter som innehåller ingredienser som sällan eller aldrig används i hushållsmatlagning – som hydrolyserade proteiner, modifierad stärkelse, emulgeringsmedel, färgämnen, smakförstärkare och konstgjorda aromer. Det handlar inte om konserverad mat eller vanligt bröd – det handlar om produkter designade för att vara billiga att producera, svåra att sluta äta och lönsamma att sälja.
+Sverige rankas som ett av de länder i Europa med högst konsumtion av ultraprocessad mat. Samtidigt ökar fetma, typ 2-diabetes, hjärt- och kärlsjukdom, demens och Alzheimers – och det som oroar mig mest är att dessa sjukdomar drabbar allt yngre människor. Det är inte en slump. Det är ett mönster.
 
-Vad forskningen visar:
-• En metaanalys publicerad i The BMJ (Monteiro et al.) kopplar ultraprocessad mat till ökad risk för fetma, typ 2-diabetes, hjärt-kärlsjukdom, depression och total dödlighet.
-• En studie i Cell Metabolism visade att personer som åt ultraprocessad mat konsumerade i genomsnitt 500 kilokalorier mer per dag jämfört med de som åt oprocessad mat – trots att de erbjöds lika mycket av båda.
-• Ultraprocessad mat är konstruerad för att kringgå kroppens naturliga mättnadssignaler via kombinationer av socker, fett, salt och textur som sällan förekommer i naturlig mat.
-• En stor del av den ultraprocessade maten riktar sig specifikt mot barn via smaksättning, förpackningsdesign och marknadsföring.
+En stor del av den mat som finns i svenska butiker är vad forskare kallar ultraprocessad. Det handlar inte om vanlig konserverad mat eller hembakat bröd. Det handlar om produkter som är industriellt framställda för att vara billiga att producera, svåra att sluta äta och lönsamma att sälja – med ingredienser de flesta av oss aldrig skulle ha hemma i köket.
 
-Systemproblemet – inte bara individens ansvar:
-Det är lätt att skylla på individens val. Men när en stor andel av kalorierna i en genomsnittlig svensk korg kommer från ultraprocessade produkter, och när dessa produkter aktivt är designade för att vara beroendeframkallande, handlar det inte längre om personligt ansvar. Det handlar om ett systemfel som kräver systemsvar.
+Forskning kopplar tydligt ultraprocessad mat till ökad risk för just dessa sjukdomar. En studie visade att personer som åt ultraprocessad mat konsumerade i genomsnitt 500 kalorier mer per dag – inte för att de var hungrigare, utan för att maten är designad för att kringgå kroppens naturliga mättnadssignaler.
 
-Frågan om transparens:
-Processningshjälpmedel – ämnen som används under tillverkning men inte räknas som ingredienser – behöver inte deklareras på förpackningen. Det innebär att konsumenten inte kan se hela bilden av vad som använts för att producera det de äter. Det strider mot grundläggande transparensprinciper.
+Det är lätt att skylla på individens val. Men när produkterna är designade för att vara beroendeframkallande och marknadsförs aktivt mot barn – är det verkligen bara ett personligt ansvar?
 
-Mina frågor till Livsmedelsverket:
-1. Anser Livsmedelsverket att den nuvarande konsumtionsnivån av ultraprocessad mat i Sverige är ett folkhälsoproblem – och om ja, vilka åtgärder vidtas?
-2. Vilken vetenskaplig rådgivning ligger till grund för råden kring processad mat, och hur ofta uppdateras dessa?
-3. Hur ställer sig Livsmedelsverket till att ultraprocessad mat marknadsförs aktivt mot barn, och finns planer på reglering?
-4. Anser Livsmedelsverket att nuvarande märkningskrav för processningshjälpmedel är förenliga med konsumentens rätt till transparent information?
-5. Vilka åtgärder vidtar Livsmedelsverket inom EU-samarbetet för att stärka regleringen av ultraprocessad mat?
+Det finns också en transparensfråga. Vissa ämnen som används i tillverkningen av mat behöver inte ens stå på förpackningen. Som konsument kan du alltså inte alltid veta vad som använts för att producera det du äter.
 
-Jag uppmanar Livsmedelsverket att ta ett tydligare och mer proaktivt ställning i denna fråga.
+Mina frågor:
+1. Ser Livsmedelsverket den höga konsumtionen av ultraprocessad mat som ett folkhälsoproblem – och om ja, vad görs åt det?
+2. Hur ställer sig Livsmedelsverket till att dessa sjukdomar drabbar allt yngre människor, och vilken roll spelar kosten i det?
+3. Hur ställer sig Livsmedelsverket till att ultraprocessad mat marknadsförs aktivt mot barn?
+4. Anser Livsmedelsverket att konsumenter har tillräcklig information om vad som används i produktionen av den mat de köper?
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad: Ultraprocessad mat och folkhälsa – frågor till Livsmedelsverket
-(t.ex. lägg till '– medborgare från [din stad]')`},
-  {id:'pyramid',tag:'Brev 4 · Kostråd',title:'Matpyramiden och USA:s reviderade kostråd',toShort:'Livsmedelsverket',
+💡 Tips ämnesrad: Ultraprocessad mat och folkhälsa – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
+  {id:'pyramid',tag:'Brev 4 · Kostråd',title:'Matpyramiden och svenska kostråd',toShort:'Livsmedelsverket',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'}],
    body:`Hej,
 
-Jag skriver till er med anledning av de kostråd som Livsmedelsverket kommunicerar till svenska befolkningen, i ljuset av den internationella och vetenskapliga debatt som nu pågår om matpyramidens grundstruktur.
+Jag skriver om något som jag tror många svenskar tar för givet – att de kostråd vi fått sedan barnsben faktiskt stämmer.
 
-Bakgrund
-USA har nyligen reviderat sin officiella syn på kost och näring, bland annat genom att ifrågasätta den traditionella matpyramiden där kolhydrater utgjort basen. Denna förändring drivs av en växande vetenskaplig konsensus som visar att:
-•  Raffinerade kolhydrater och socker är primära drivkrafter bakom insulinresistens, typ 2-diabetes och fetma.
-•  Naturliga mättade fetter – från animaliska källor som ägg, smör och kött – inte är den hjärtkärlbov de länge utmålats som i befolkningsstudier med bristfällig metodologi.
-•  Protein och fett ger bättre mättnad, stabilare blodsocker och stöder hormonfunktion bättre än kolhydrattung kost.
-•  Den holistiska hälsovärlden – nutritionister, funktionsmedicinare och en stor del av den kliniska forskningen – har länge förespråkat en omvärdering av pyramiden.
+USA har nyligen reviderat sina officiella kostråd och gått bort från matpyramiden med kolhydrater som bas. Det är inte en liten justering – det är ett erkännande av att råden vi levt efter i decennier inte stämde överens med hur kroppen faktiskt fungerar. Ny forskning pekar tydligt på att raffinerat socker och snabba kolhydrater driver fetma, diabetes och metabola sjukdomar – inte naturliga fetter som länge utmålades som boven.
 
-Min fråga till Livsmedelsverket
-•  Mot bakgrund av att Sverige ligger i topp i Europa vad gäller konsumtion av ultraprocessad mat och har en allt sämre folkhälsa med stigande förekomst av typ 2-diabetes, fetma och hjärt-kärlsjukdom – varför väljer Livsmedelsverket att stå fast vid en matpyramid med kolhydrater som bas?
-•  Vilken vetenskaplig grund lutar sig Livsmedelsverket mot när man prioriterar spannmål och kolhydrater framför protein och naturliga fetter i sina kostråd?
-•  Hur förhåller sig Livsmedelsverket till den stora mängd forskning och klinisk erfarenhet som talar för en kostmodell med lägre kolhydrater och högre andel protein och fett?
-•  Finns det planer på att revidera de svenska kostråden i linje med den internationella vetenskapliga utvecklingen?
-•  Hur väger Livsmedelsverket industrins påverkan – via lobbying och finansiering av forskning – när kostråden utformas?
+Samtidigt ser vi i Sverige att just dessa sjukdomar ökar och drabbar allt yngre människor. Och ändå baseras de råd som kommuniceras via skolan, BVC och vården fortfarande på den gamla pyramidens logik.
 
-Det handlar ytterst om folkhälsa. Om de kostråd som kommuniceras till svenska befolkningen bidrar till snarare än motverkar den ökande sjukdomsbördan, har Livsmedelsverket ett ansvar att omvärdera och kommunicera dessa med större öppenhet för ny kunskap.
-Jag välkomnar ett svar och hoppas att denna fråga kan initieras till en bredare och mer öppen diskussion.
+Det finns också en historisk dimension som är värd att lyfta. Forskning har visat att livsmedelsindustrin under decennier aktivt påverkat kostforskningen för att styra skulden bort från socker och mot fett. Det är inte en konspirationsteori – det är dokumenterat i vetenskapliga publikationer. Det väcker en rimlig fråga om vems intressen som egentligen format de råd vi fått.
+
+Mina frågor:
+1. Hur förhåller sig Livsmedelsverket till den nya internationella forskningen som ifrågasätter en kolhydrattung kostmodell?
+2. Finns det planer på att se över de svenska kostråden i ljuset av den forskning som nu finns tillgänglig?
+3. Hur säkerställer Livsmedelsverket att kostråden är fria från industriinflytande?
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Svenska kostråd och ny internationell forskning – begäran om översyn
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Svenska kostråd och ny forskning – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'hallbar',tag:'Brev 5 · Lantbruk & Mark',title:'Hållbart kosthållning & nordisk mixad kost',toShort:'Jordbruksverket & Landsbygdsdepartementet',
    recipients:[{name:'Jordbruksverket',email:'jordbruksverket@jordbruksverket.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver till er med en mer övergripande fråga om riktningen för svensk mat- och jordbrukspolitik. Debatten om hållbar mat har länge dominerats av ett enda budskap: ät mindre kött, ät mer växtbaserat. Jag vill utmana denna förenklade bild och argumentera för en mer nyanserad, vetenskapligt förankrad och realistisk syn på vad hållbar mat faktiskt innebär för Sverige.
+Jag skriver om något som saknas i debatten om hållbar mat – ett nordiskt perspektiv.
 
-Det centrala problemet är inte vad vi äter – det är hur och var det produceras.
+Diskussionen handlar nästan alltid om att äta mindre kött och mer växtbaserat. Men Sverige är inte Sydostasien. Vi kan inte odla soja, mandlar eller avokado lokalt. Vi har däremot miljoner hektar betesmark, ren natur och en lång tradition av mixad kost baserad på det landet faktiskt ger. Betesdjuren håller kulturlandskapet öppet, bevarar biologisk mångfald och återför näring till marken. När de försvinner växer markerna igen – och med dem ekosystem som tagit hundratals år att bygga upp.
 
-Storskalig industriell matproduktion
-Storskalig industriell matproduktion – oavsett om den är vegansk eller animalisk – är det verkliga miljöproblemet. Den:
-•  Utarmar jordbruksmark via monokultur och konstgödsel baserat på fossila bränslen.
-•  Förstör biologisk mångfald när samma gröda odlas på tusentals hektar år efter år.
-•  Kräver enorma transportavstånd som genererar koldioxidutsläpp i varje led.
-•  Producerar upp till 30–40 procent matsvinn i kedjan från producent till konsument.
-•  Är sårbar för globala störningar – som vi såg tydligt under pandemin och i samband med geopolitiska kriser.
+Det finns också en jordbruksfråga som sällan nämns. Decennier av storskaligt industrijordbruk och fossil konstgödsel har utarmat svenska jordar. Att återställa dem kräver en politik som premierar regenerativt och lokalt jordbruk – inte stordrift och prispress.
 
-Vad forskningen faktiskt visar
-•  Betande djur på naturbetesmark binder koldioxid i marken och bevarar biologisk mångfald – det är inte klimatskadligt, det är klimatneutralt eller positivt vid rätt förvaltning.
-•  Djurgödsel är fundamentalt för levande jordar. Utan djuren i kretsloppet ersätts gödsel av konstgödsel – med fossilt ursprung och stor miljöpåverkan.
-•  Lokalproducerad mat i säsong har en dramatiskt lägre klimatpåverkan än importerad mat, oavsett om den är vegansk eller animalisk.
-•  En svensk som äter lokalproducerat kött från betesdrift och svenska rotfrukter har sannolikt lägre klimatpåverkan än en vegan som äter importerad mandelmjölk, avokado och fabrikstillverkade köttsubstitut.
+Mina frågor:
+1. Hur tar jordbrukspolitiken hänsyn till nordliga förhållanden, där mixad kost baserad på lokala råvaror har starka ekologiska argument?
+2. Varför subventioneras storskalig industriell produktion framför regenerativt och lokalproducerat jordbruk?
+3. Finns konkreta mål för att återställa naturliga kväveförhållanden i svensk jordbruksmark?
+4. Hur verkar myndigheterna för att bevara det svenska beteslandskapet och den biologiska mångfald det bär?
 
-Kvävekretsloppet och markens naturliga återhämtning
-Kvävekretsloppet är en del av samma problem. Konstgödsel baserat på fossil energi, framställt via Haber-Bosch-processen, har under decennier ersatt de naturliga kvävekällor som en gång byggde upp svensk jordbruksmark – djurgödsel, kvävefixerande växter som klöver och baljväxter, samt en levande, mikrobiellt rik jord.
-Resultatet är jordar som blir alltmer utarmade och alltmer beroende av extern tillförsel av konstgödsel för att producera någonting alls. Detta är inte bara en klimatfråga – det är en fråga om markens långsiktiga bärkraft och Sveriges förmåga till självförsörjning.
-Att återställa naturliga kväveförhållanden genom växtföljd, fånggrödor, betesdrift och organiskt material i jorden är fullt möjligt – men kräver en jordbrukspolitik som aktivt premierar det, snarare än att enbart subventionera storskalig produktion baserad på konstgödsel.
-
-Mina konkreta frågor och uppmaningar
-•  Varför subventioneras storskalig industriell produktion framför regenerativt och lokalproducerat jordbruk i Sverige? Är det dags att styra om jordbruksstödet?
-•  Vilka konkreta åtgärder vidtas för att stärka det lokala, småskaliga och regenerativa lantbruket i Sverige – det som faktiskt kan bidra till bättre jordhälsa, biologisk mångfald och minskad klimatpåverkan?
-•  Finns konkreta mål eller strategier för att återställa naturliga kväveförhållanden i svensk jordbruksmark, snarare än fortsatt strukturellt beroende av konstgödsel?
-•  Hur verkar myndigheterna för att konsumenter ska kunna välja lokalproducerat och säsongsanpassat – praktiskt och ekonomiskt tillgängligt, inte bara som ett lyxval?
-•  Hur hanteras det faktum att den nuvarande klimatdebatten kring mat riskerar att driva konsumenter mot globalt producerade veganska produkter med hög faktisk miljöpåverkan?
-•  Vilken roll ges det svenska kulturlandskapet och betesmarken i den nationella klimat- och jordbruksstrategin? Betesmarker som inte betas försvinner – och med dem biologisk mångfald och koldioxidbindning.
-
-Sverige har en unik möjlighet att visa att hållbart jordbruk inte handlar om att välja mellan djur och växter – utan om att producera rätt saker på rätt plats, på rätt sätt.
-
-Vi har ren natur och låg befolkningstäthet med betesdjur som har tillgång till naturbetesmark som i stora delar av världen redan är förstörd. Vi har en av världens strängaste djurskyddslagstiftningar. Vi har miljoner hektar naturbetesmark som riskerar att växa igen om djurhållningen minskar – mark som inte kan odla quinoa eller soja, men som kan bära betesdjur som producerar mat och bevarar biologisk mångfald. Vi har generationer av kunskap om regenerativt och blandat jordbruk som är svår att återskapa om den väl försvinner. Och vi har trovärdighet – ett litet land med höga standards och transparent livsmedelssystem har faktiskt möjlighet att bli en röst i den globala debatten om vad hållbar mat faktiskt innebär.
-
-Den möjligheten undergrävs aktivt av en jordbrukspolitik som driver mot stordrift, industrialisering och prispress – istället för att premiera det Sverige faktiskt är bra på.
+Sverige har unika förutsättningar att visa hur hållbar mat kan se ut – med ren natur, bra djurskydd och lokal produktion. Låt oss utnyttja det.
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad: Hållbart kosthållning och nordisk mixad kost – frågor till Jordbruksverket
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Hållbart kosthållning och nordisk mixad kost – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'livs',tag:'Brev 6 · Jäv',title:'Livsmedelspolitiska rådets sammansättning',toShort:'Livsmedelsverket & Landsbygdsdepartementet',
    recipients:[{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Landsbygds- och infrastrukturdepartementet',email:'li.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver angående sammansättningen av Sveriges livsmedelspolitiska råd och vilka aktörer som ges plats att forma svensk kost- och hälsopolitik.
+Jag skriver om en fråga som handlar om förtroende – vem är det som egentligen formar svenska kostråd?
 
-Bakgrund och problemet
-Flera av de företag som idag är representerade i rådgivande organ kring svensk livsmedelspolitik tillverkar produkter som enligt etablerad forskning är direkt kopplade till ökad risk för fetma, typ 2-diabetes och hjärt-kärlsjukdom. Bland aktörer som förekommer i denna typ av sammanhang återfinns bolag som Coca-Cola, Cloetta, Orkla och Spendrups – företag vars kärnverksamhet bygger på försäljning av socker, läsk och ultraprocessade produkter.
-Att samma aktörer som tjänar ekonomiskt på hög konsumtion av dessa produkter samtidigt får vara med och påverka nationella kostråd, märkningsregler och folkhälsopolitik utgör en uppenbar jävsproblematik. Det är jämförbart med att låta tobaksindustrin sitta med och utforma rökavvänjningskampanjer.
+Det har kommit fram att bolag som Coca-Cola, Cloetta, Orkla och Spendrups förekommer i rådgivande organ kring svensk livsmedelspolitik. Det vill säga företag vars affärsmodell bygger på att vi köper och äter just de produkter som forskningen kopplar till fetma, diabetes och hjärt- och kärlsjukdom. Att dessa aktörer får vara med och påverka nationella kostråd och livsmedelspolitik är en jävsfråga som förtjänar ett tydligt svar.
 
-Varför detta spelar roll
-•  Kommersiella intressen riskerar att väga tyngre än oberoende forskning när kostråd och regleringar formuleras.
-•  Allmänhetens förtroende för myndigheternas kostrekommendationer undergrävs när industrinärvaron inte är transparent.
-•  Sverige har redan en stigande sjukdomsbörda kopplad till kost – typ 2-diabetes, fetma och hjärt-kärlsjukdom – vilket gör frågan om vems röst som väger tyngst i kostrådspolitiken ännu mer angelägen.
+Det är ungefär som att låta tobaksbolagen sitta med och utforma råd om rökning.
 
-Mina frågor
-•  Vilka kriterier styr vilka organisationer och företag som bjuds in att delta i livsmedelspolitiska rådgivande organ?
-•  Hur säkerställer Livsmedelsverket och regeringskansliet att kommersiella intressen inte otillbörligt påverkar nationella folkhälsorekommendationer?
-•  Finns en plan för att se över jävsreglerna kring sammansättningen av dessa råd, så att aktörer med direkt kommersiellt intresse i utfallet inte ges en rådgivande roll i frågor som rör deras egna produktkategorier?
-•  Kan en fullständig och offentligt tillgänglig lista över samtliga nuvarande medlemmar i relevanta råd samt deras kommersiella kopplingar tillhandahållas?
+Forskning har dessutom visat att livsmedelsindustrin historiskt har finansierat studier för att styra skulden bort från socker och mot fett – med direkta konsekvenser för de kostråd vi alla levt efter. Det gör transparensfrågan ännu viktigare.
 
-Jag uppmanar er att genomföra en oberoende översyn av rådets sammansättning och stärka transparensen kring vilka intressen som får plats vid bordet när Sveriges kostpolitik formas. Folkhälsan bör inte formas av de aktörer som tjänar mest på att den uteblir.
+Mina frågor:
+1. Vilka kriterier avgör vilka organisationer och företag som får delta i rådgivande organ kring livsmedelspolitiken?
+2. Hur säkerställs att kommersiella intressen inte påverkar de råd som ges till svenska folket?
+3. Kan en offentlig lista över rådets nuvarande medlemmar och deras kopplingar till livsmedelsindustrin tillhandahållas?
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Jäv i livsmedelspolitiska rådgivande organ – begäran om transparens
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Jäv i livsmedelspolitiska rådet – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'skolmat',tag:'Brev 7 · Skolmat',title:'Skolmatens näringskvalitet',toShort:'Skolverket, Livsmedelsverket & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Livsmedelsverket',email:'livsmedelsverket@slv.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
 
-Jag skriver till er med anledning av den svenska skolmatens näringskvalitet och de systemfel i upphandling och reglering som i dag gör att en stor andel svenska barn dagligen serveras mat som inte uppfyller deras grundläggande näringsbehov.
+Jag skriver till er om ett ämne som berör varje barn i Sverige – skolmaten.
 
-Barn tillbringar 10–12 år i skolan och äter minst ett mål mat om dagen där. Det är ett av de mest kraftfulla folkhälsoinstrument ett samhälle förfogar över. Ändå upphandlas skolmat i dag primärt på pris, inte på näringskvalitet. Resultatet är mat som mättar men inte bygger – och barn som går till lektionerna med hjärnor och kroppar som saknar de råvaror de behöver för att fungera optimalt.
+Barn tillbringar 10–12 år i skolan och äter minst ett mål mat om dagen där. Det är ett av de mest kraftfulla tillfällen samhället har att faktiskt investera i barns hälsa. Ändå upphandlas skolmat i dag primärt på pris, inte på näringskvalitet. Resultatet är mat som mättar magen men inte bygger hjärnor, hormoner eller immunförsvar.
 
+Det vi lägger på tallriken spelar roll. Järn behövs för att syret ska nå hjärnan och för att barn ska kunna koncentrera sig. B-vitaminer – framför allt B12 och folat – är avgörande för nervsystemet och för produktionen av serotonin och dopamin. Kolin är ett ämne som är fundamentalt för minne och inlärning, och som finns rikligt i ägg – en billig och enkel råvara som lyser med sin frånvaro i de flesta skolkök. Naturliga fetter och kolesterol är hjärnans byggmaterial. Forskning från Johns Hopkins (Tierney et al., 2006) har visat att barn med autismspektrumtillstånd ofta har kliniskt låga kolesterolnivåer – vilket väcker frågan om vi aktivt begränsar något hjärnan faktiskt behöver.
 
-1. Systemfelet – upphandling på lägsta pris
-Den svenska skolmatens grundproblem är strukturellt. Kommunerna upphandlar måltidstjänster i konkurrens, och i avsaknad av tydliga näringskrav som faktiskt följs upp vinner det billigaste alternativet. Det leder till:
+USA har nyligen reviderat sina officiella kostråd och gått bort från den gamla lågfettspyramiden. Svensk skolmat verkar inte ha fått det memot.
 
-Övervikt av billiga kolhydrater – vitt bröd, pasta, ris och potatis utgör basen i de flesta skolrätter.
-För lite protein av hög kvalitet – animaliskt protein med komplett aminosyraprofil ersätts av billiga vegetabiliska alternativ som inte täcker barns behov.
-Industriella vegetabiliska oljor istället för naturliga fetter – påverkar omega-6/omega-3-balansen negativt och driver inflammation.
-Minimalt med inälvsmat, ägg eller andra näringsdensa råvaror – trots att dessa är de mest kostnadseffektiva källorna till kritiska mikronäringsämnen.
-Processade halvfabrikat med låg näringsdensitet – som mättar kalorierna men inte mikronäringsbehovet.
+Mina frågor:
+1. Varför upphandlas skolmat på pris snarare än näringskvalitet – och finns det planer på att ändra det?
+2. Hur följs det upp att skolmaten faktiskt innehåller tillräckligt med järn, B-vitaminer och naturliga fetter?
+3. Varför saknas enkla och billiga råvaror som ägg, lever och sardiner i de flesta skolkök?
+4. Hur förhåller sig myndigheterna till den forskning som ifrågasätter lågfettideologin för växande barn?
 
-USA:s nyligen reviderade kostråd (2025) har frångått den gamla matpyramiden med kolhydrater som bas och i stället betonat protein, naturliga fetter och mikronutrienttäta livsmedel. Forskningen bakom denna förändring har funnits tillgänglig i decennier. Svensk skolmat baseras fortfarande på den gamla pyramidens logik.
-
-2. Kritiska näringsbristerna i svensk skolmat
-Nedanstående ämnen är fundamentala för barns neurologiska utveckling, immunförsvar, energiproduktion och hormonella mognad. Samtliga är underkritiska i en typisk svensk skolmatsstat.
-
-B-vitaminer – nervsystem, energi och celldelning
-B-vitaminerna – särskilt B1 (tiamin), B6 (pyridoxin), B9 (folat) och B12 (kobalamin) – är essentiella för barnets nervsystem, kognitiva funktion och röda blodkroppar. B12 finns uteslutande i animaliska livsmedel. Folat är kritiskt för celldelning och DNAreparation. B6 krävs för produktion av serotonin och dopamin.
-
-B12-brist hos barn ger trötthet, koncentrationssvårigheter, neurologiska symptom och försenad utveckling.
-Folatbrist är vanligare än man tror – processade livsmedel är fattiga på folat, och syntesen av folsyra via vitamin B9 är komplex.
-B6-brist kopplas till depression, sömnproblem och sämre immunrespons hos barn.
-Bästa källorna: lever, ägg, fisk, kött, fullkornsprodukter – varav lever sticker ut som den enskilt mest näringsdensa råvaran per krona.
-
-Järn – syre, kognition och hormonproduktion
-Järnbrist är den vanligaste näringsbrist i världen och drabbar barn hårt. Hemjärn från animaliska källor absorberas med 15–35 procent effektivitet. Icke-hemjärn från vegetabiliska källor absorberas med 2–8 procent, och absorptionen hämmas ytterligare av fytater i spannmål.
-
-Järn krävs för syretransport till hjärnan – brist ger direkt sämre kognitiv funktion, koncentration och inlärningsförmåga.
-Serotonin, dopamin och noradrenalin kräver järn i syntesen – järnbrist ger humörpåverkan och ökad risk för depression.
-Sköldkörtelhormon (T3/T4) kräver järn – brist stör ämnesomsättning och energinivå.
-Ferritin under 30 µg/L innebär funktionell järnbrist även med normalt hemoglobin – ett mått som sällan kontrolleras hos skolbarn.
-Bästa källorna: nötlever, rött kött, sardiner – serverade med C-vitaminrik mat för optimal absorption.
-
-Kolin – hjärnans byggmaterial
-Kolin är ett essentiellt ämne som kroppen inte kan producera i tillräcklig mängd och som måste tillföras via kosten. Det är fundamentalt för:
-Acetykolinsyntesen – den viktigaste signalsubstansen för minne, inlärning och uppmärksamhet.
-Myelinisering – uppbyggnaden av de skyddande fettskidor som omger nervtrådarna och möjliggör snabb signalöverföring.
-Cellmembranens integritet – varje cell i kroppen behöver kolin för att fungera korrekt.
-Leverns fettomsättning – kolinbrist är en av orsakerna bakom icke-alkoholrelaterad fettlever, även hos barn.
-
-Bästa källorna: ägg (en äggula innehåller ~150 mg kolin, 25–30 procent av barns dagsbehov), lever, fisk, kött.
-Typisk skolmat: nära noll kolin. Ägget – den billigaste och mest kolinrika råvaran – lyser med sin frånvaro.
-
-Folat – celldelning, DNA och neurologisk utveckling
-Folat (B9 i naturlig form) är nödvändigt för DNAsyntes och celldelning – processer som är intensiva under barndomen och tonåren. Det är också kritiskt för produktionen av röda blodkroppar och för nervsystemets funktion.
-Folatbrist ger megaloblastisk anemi, trötthet och kognitiv nedgång.
-Folat samverkar med B12 i metyleringscykeln – brist på endera stör cyklern och påverkar humör, kognition och genpåverkan (epigenetik).
-Bästa källorna: lever (rikast av alla livsmedel), bladgrönsaker, baljväxter, ägg.
-Viktigt: syntetisk folsyra (i berikade livsmedel) är inte identisk med naturligt folat och kan hos barn med MTHFR-genvarianter (upp till 40 procent av befolkningen) faktiskt störa folatmetabolismen.
-
-3. Kolesterolets kritiska roll för barns hjärna
-Forskning (Tierney et al., 2006, Johns Hopkins) visar att 19% av 100 undersökta barn med autismspektrumtillstånd hade kliniskt låga kolesterolnivåer – en signifikant avvikelse som väcker frågor om kostens roll i neurologisk utveckling. Trots detta serveras barn i svenska skolor mat med minimalt naturligt kolesterol och med aktivt budskap om att undvika mättade fetter. Detta är en potentiellt allvarlig felriktning.
-
-Kolesterol är inte ett gift – det är ett av kroppens mest livsviktiga molekyler, och hjärnan är det organ som är mest beroende av det:
-
-Hjärnan består till ca 60 procent av fett, varav en stor del är kolesterol och myelinbildande fettsyror.
-Kolesterol är en förutsättning för synapsutveckling – utan kolesterol kan nervceller inte bygga de kopplingar som möjliggör inlärning och minne.
-Alla steroidhormoner – testosteron, östrogen, kortisol, DHEA – syntetiseras från kolesterol. En lågkolesterolkost under uppväxten stör den hormonella grundutvecklingen.
-Serotoninutsöndringen i hjärnan är delvis beroende av kolesterol i cellmembranet – lågt kolesterol kopplas i forskning till ökad impulsivitet och depression.
-Smith-Lemli-Opitz syndrom, en genetisk störning i kolesterolsyntesen, resulterar i svåra neurologiska skador – ett tydligt bevis på att kolesterol är essentiellt för hjärnans normala funktion.
-
-Trots detta baseras skolmatens fettideologi fortfarande på den gamla och ifrågasatta hypotesen att mättat fett är skadligt. Den hypotesen har inte stöd i moderna kohortstudier och metaanalyser, och den håller inte alls när det gäller barns hjärnor under aktiv utveckling.
-
-Forskning (Tierney et al., 2006; Aneja & Tierney, 2008) visar signifikant lägre kolesterolnivåer hos barn med autismspektrumstörning. En pilotstudie visade förbättrade beteendesymptom hos autistiska barn efter kolesterolsupplementering. Detta är inte ett argument för att behandla autism med kolesterol – det är ett argument för att inte aktivt begränsa kolesterol i mat till växande barn.
-
-Bästa källorna till naturligt kolesterol och hälsosamma mättade fetter: ägg, smör, lever, fet fisk, fullfett mejeriprodukter. Samtliga är prisvärda, näringsdensa och bör vara självklara inslag i en väloptimerad skolmat.
-
-4. Mina konkreta frågor och krav
-Varför upphandlas skolmat primärt på pris snarare än på näringskvalitet? Finns det planer på att ändra upphandlingsreglerna så att näringsdensitet väger tyngre?
-Hur ser Skolverket och Livsmedelsverket på den vetenskapliga forskning som ifrågasätter en kolhydrattung skolkost, inklusive USA:s reviderade kostråd från 2025?
-Vilka konkreta krav ställs i dag på halter av B-vitaminer, järn, kolin och folat i skolmaten – och hur följs dessa upp i praktiken?
-Varför saknas näringsdensa råvaror som lever, ägg, sardiner och smör i de flesta skolkök, trots att dessa är billiga och extremt näringsdensa?
-Hur förhåller sig myndigheterna till forskning som kopplar lågt kolesterol hos barn till neurologisk och psykiatrisk problematik? Finns det en beredskap att revidera kostideologin kring mättade fetter för barn?
-Vad görs konkret för att säkerställa att barn med järnbrist, B12-brist eller kolinbrist identifieras och får adekvat kost i skolan?
-
-Sverige satsar miljarder på skola, specialpedagogik och elevhälsa. Om vi inte adresserar grundproblemet – att hjärnorna vi försöker utbilda inte får de byggstenar de behöver – är resten av insatserna en kamp i motvind.
-
-Jag uppmanar Skolverket, Livsmedelsverket och Utbildningsdepartementet att ta denna fråga på allvar och inleda ett arbete för en evidensbaserad, näringsdensitetsoptimerad skolmat – för alla svenska barns skull.
-
-
-Utvalda källhänvisningar
-Tierney, E. et al. (2006). Behavior problems in children with autism, poor socialization, and low serum cholesterol. Research in Autism Spectrum Disorders.
-Aneja, A. & Tierney, E. (2008). Autism: the role of cholesterol in treatment. International Review of Psychiatry, 20(2), 165–170.
-Georgieff, M.K. (2007). Nutrition and the developing brain: nutrient priorities and measurement. American Journal of Clinical Nutrition, 85(2), 614S–620S.
-Zeisel, S.H. (2006). Choline: critical role during fetal development and dietary requirements in adults. Annual Review of Nutrition, 26, 229–250.
-Beard, J.L. (2001). Iron biology in immune function, muscle metabolism and neuronal functioning. Journal of Nutrition, 131(2S-2), 568S–580S.
-USDA Dietary Guidelines Advisory Committee (2025). Dietary Guidelines for Americans 2025–2030. U.S. Department of Agriculture.
+Sverige satsar miljarder på skola och elevhälsa. Men om hjärnan inte får det den behöver är allt annat en kamp i motvind.
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad (anpassa gärna med din ort):
-Skolmatens näringskvalitet – ett systemfel som kräver åtgärd
-(t.ex. lägg till '– medborgare från [din stad]')`},
+💡 Tips ämnesrad: Skolmatens näringskvalitet – frågor från en medborgare
+(t.ex. lägg till '– från [din stad]')`},
   {id:'rorelse',tag:'Brev 8 · Rörelse & Motorik',title:'Rörelse, motorik och andning i tidig ålder',toShort:'Skolverket, Skolinspektionen & Utbildningsdep.',
    recipients:[{name:'Skolverket',email:'skolverket@skolverket.se'},{name:'Skolinspektionen',email:'skolinspektionen@skolinspektionen.se'},{name:'Utbildningsdepartementet',email:'u.registrator@regeringskansliet.se'}],
    body:`Hej,
@@ -653,49 +453,32 @@ Med vänliga hälsningar,
 [Ditt namn]
 
 💡 Tips ämnesrad: Rörelse, motorik och andning i skolan – medborgarfrågor
-(t.ex. lägg till '– medborgare från [din stad]')`},
+(t.ex. lägg till '– från [din stad]')`},
   {id:'ppiller',tag:'Brev 9 · Kvinnohälsa',title:'P-piller och rotorsaksbaserad kvinnovård',toShort:'Socialstyrelsen & Folkhälsomyndigheten',
    recipients:[{name:'Socialstyrelsen',email:'socialstyrelsen@socialstyrelsen.se'},{name:'Folkhälsomyndigheten',email:'info@folkhalsomyndigheten.se'}],
    body:`Hej,
 
-Jag skriver med en fråga som berör hundratusentals svenska flickor och unga kvinnor – och som sällan ställs öppet i den medicinska debatten: varför är p-piller förstahandsvalet vid mensvärk, oregelbunden mens, PCOS och endometrios hos unga flickor, snarare än en utredning av de bakomliggande orsakerna?
+Jag skriver om något som berör hundratusentals svenska flickor och unga kvinnor – och som jag tror förtjänar en mer öppen diskussion: varför är p-piller så ofta det första och enda alternativet vid mensvärk, oregelbunden mens och hormonella besvär?
 
-En kropp byggd på en annan rytm:
-Kvinnans kropp fungerar enligt en 28-dagars cykel med fyra distinkta faser – var och en med sin egen hormonprofil, energinivå och kognitiva karaktär. Det samhälle unga flickor föds in i är inte byggt för denna rytm. Skolan, arbetslivet och samhällets prestationskrav bygger på en 24-timmars cykel – samma förmåga att leverera och prestera varje dag hela månaden. Det är inte en neutral struktur. Det är en struktur byggd runt en manlig biologisk rytm.
+Kvinnans kropp fungerar enligt en naturlig 28-dagars cykel. Varje fas har sin egen energi, sina egna styrkor och sitt eget behov av återhämtning. Det samhälle vi lever i är inte byggt för den rytmen. Skola och arbetsliv förväntar sig samma prestation varje dag, hela månaden. P-piller plättar ut cykeln och skapar en artificiell stabilitet. Det kanske passar samhällets krav – men är det alltid det bästa för flickan?
 
-P-piller plättar ut den kvinnliga cykeln och skapar en artificiell hormonell stabilitet. För samhällets produktivitetskrav är det en lösning. För flickans biologi är det en intervention med konsekvenser som sällan kommuniceras tydligt.
+Det som sällan diskuteras är att smärtsam mens, PCOS och oregelbunden cykel ofta har bakomliggande orsaker. Inflammation, näringsbrist, sömnbrist och stress är faktorer som faktiskt går att påverka. En studie från Karolinska Institutet (Zethraeus et al., 2017) visade att kombinerade p-piller sänkte det allmänna välmåendet hos friska unga kvinnor. Ändå är det förstahandsvalet.
 
-Symptom som döljer rotorsaker:
-Smärtsam mens, PCOS och endometrios behandlas i svensk sjukvård övervägande med p-piller. Det är symptombehandling – inte rotorsaksbehandling. Forskning visar att dessa tillstånd ofta har identifierbara och påverkbara orsaker:
-• PCOS är i hög grad kopplat till insulinresistens och inflammation. Koständringar, sömnoptimering och stressreducering har i studier visat signifikanta effekter på symtom och hormonbalans – utan att stänga av den egna hormonproduktionen.
-• Endometrios är kopplat till systemisk inflammation och östrogendominans. Kostinterventioner med antiinflammatorisk profil och stöd för leverns östrogenmetabolism är underutforskade men lovande alternativ.
-• Smärtsam mens är i många fall kopplad till magnesiumbrist, D-vitaminbrist och omega-3-brist – alla med starkt vetenskapligt stöd för att minska mensvärk när de åtgärdas.
-
-Ingen av dessa rotorsaker utreds systematiskt innan p-piller skrivs ut.
-
-Vad som sällan berättas:
-En dubbelblind, placebokontrollerad studie från Karolinska Institutet (Zethraeus et al., 2017) visade att kombinerade p-piller signifikant sänkte det allmänna välmåendet hos friska unga kvinnor. Ändå är p-piller förstahandsvalet vid i stort sett alla menstruationsrelaterade besvär.
-
-Unga flickor och deras föräldrar får sällan information om att:
-• P-piller stänger av den egna hormonproduktionen via negativ feedbackhämning av hypofysen.
-• Det kan ta månader till år innan den egna cykeln normaliseras efter avslutad användning.
-• Den naturliga cykeln är en källa till biologisk information om kroppens hälsa – information som försvinner med p-pillret.
-• Det finns alternativa behandlingsvägar som adresserar rotorsakerna snarare än att dölja symptomen.
+Jag ifrågasätter inte p-piller som sådant. Det finns situationer där det är rätt val. Men rätt val kräver rätt information – och det verkar inte alltid vara vad unga flickor och deras föräldrar får.
 
 Mina frågor:
-1. Varför är p-piller förstahandsvalet vid mensvärk, PCOS och endometrios – och inte en systematisk utredning av bakomliggande inflammatoriska, metabola eller nutritionella orsaker?
-2. Vilka riktlinjer finns för att informera unga flickor och deras vårdnadshavare om p-pillrets effekter på välmåendet och vad som händer vid avslutad användning?
-3. Hur förhåller sig myndigheterna till forskning som visar att livsstilsinterventioner kan ha signifikanta effekter på PCOS och mensvärk?
-4. Finns planer på nationella riktlinjer för rotorsaksutredning vid menstruationsrelaterade besvär hos unga, innan farmakologisk behandling initieras?
-5. Hur säkerställs att unga flickor ges ett genuint informerat samtycke – inklusive information om alternativa behandlingsvägar – innan p-piller skrivs ut?
+1. Varför utreds sällan de bakomliggande orsakerna till mensvärk och hormonella besvär innan p-piller skrivs ut?
+2. Hur säkerställs att unga flickor och deras föräldrar får ett genuint informerat samtycke – inklusive information om alternativa vägar?
+3. Hur förhåller sig myndigheterna till forskning som visar att livsstilsförändringar kan ha positiva effekter på PCOS och mensvärk?
+4. Finns det planer på nationella riktlinjer för rotorsaksutredning innan farmakologisk behandling sätts in?
 
-Sverige har möjlighet att bli ett föregångsland för en mer holistisk och rotorsaksbaserad kvinnohälsa. Det kräver att vi slutar behandla den kvinnliga biologin som ett problem att stabilisera – och börjar se den som det den är: ett komplext, informationsrikt system som förtjänar en vård som lyssnar snarare än tystar.
+Den kvinnliga biologin är inte ett problem att medicinera bort. Det är ett system som förtjänar en vård som faktiskt lyssnar.
 
 Med vänliga hälsningar,
 [Ditt namn]
 
-💡 Tips ämnesrad: P-piller som förstahandsval vid mensvärk och PCOS – frågor om rotorsaksbaserad vård
-(t.ex. lägg till '– medborgare från [din stad]')`}
+💡 Tips ämnesrad: P-piller som förstahandsval – frågor om rotorsaksbaserad kvinnovård
+(t.ex. lägg till '– från [din stad]')`}
   // <-- LÄGG TILL NÄSTA BREV PRECIS OVANFÖR DENNA RAD
 ];
 function getCounts(){try{return JSON.parse(localStorage.getItem('mc2')||'{}');}catch{return{};}}
@@ -708,47 +491,14 @@ function renderLetters(){
     const cnt=counts[l.id]||0;
     const recips=l.recipients.map(r=>`<div class="recipient-chip"><span>${r.name}</span><button class="copy-email-btn" onclick="copyEmail(event,'${r.email}')">📋 ${r.email}</button></div>`).join('');
     const safeBody=l.body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    return `<div class="letter-card" id="card-${l.id}">
-      <div class="letter-header" onclick="toggleCard('${l.id}')">
-        <div class="letter-num">${i+1}</div>
-        <div class="letter-header-text">
-          <div class="letter-tag">${l.tag}</div>
-          <div class="letter-title">${l.title}</div>
-          <div class="letter-to-short">Till: ${l.toShort}</div>
-        </div>
-        <div class="letter-right">
-          <div class="copy-badge"><span class="count" id="cnt-${l.id}">${cnt}</span><span>kopior</span></div>
-          <div class="toggle-icon">+</div>
-        </div>
-      </div>
-      <div class="letter-body">
-        <div class="recipients-row">${recips}</div>
-        <div class="mail-box">${safeBody}</div>
-        <div class="mail-actions">
-          <button class="btn-copy-mail" id="btn-${l.id}" onclick="copyMail('${l.id}')">📋 Kopiera brev</button>
-          <button class="btn-copy-all" onclick="copyAllEmails('${l.id}')">✉️ Kopiera alla mottagare</button>
-          <span class="copy-hint">Klistra in i din mail-app och tryck skicka.</span>
-        </div>
-      </div>
-    </div>`;
+    return `<div class="letter-card" id="card-${l.id}"><div class="letter-header" onclick="toggleCard('${l.id}')"><div class="letter-num">${i+1}</div><div class="letter-header-text"><div class="letter-tag">${l.tag}</div><div class="letter-title">${l.title}</div><div class="letter-to-short">Till: ${l.toShort}</div></div><div class="letter-right"><div class="copy-badge"><span class="count" id="cnt-${l.id}">${cnt}</span><span>kopior</span></div><div class="toggle-icon">+</div></div></div><div class="letter-body"><div class="recipients-row">${recips}</div><div class="mail-box">${safeBody}</div><div class="mail-actions"><button class="btn-copy-mail" id="btn-${l.id}" onclick="copyMail('${l.id}')">📋 Kopiera brev</button><button class="btn-copy-all" onclick="copyAllEmails('${l.id}')">✉️ Kopiera alla mottagare</button><span class="copy-hint">Klistra in i din mail-app och tryck skicka.</span></div></div></div>`;
   }).join('');
   document.getElementById('totalCopies').textContent=totalCount();
 }
 function toggleCard(id){document.getElementById('card-'+id).classList.toggle('open');}
 function copyEmail(e,email){e.stopPropagation();navigator.clipboard.writeText(email).then(()=>showToast('✓ '+email+' kopierad!'));}
 function copyAllEmails(id){const l=LETTERS.find(x=>x.id===id);navigator.clipboard.writeText(l.recipients.map(r=>r.email).join(', ')).then(()=>showToast('✓ Alla mottagare kopierade!'));}
-function copyMail(id){
-  const l=LETTERS.find(x=>x.id===id);
-  navigator.clipboard.writeText(l.body).then(()=>{
-    const n=increment(id);
-    document.getElementById('cnt-'+id).textContent=n;
-    document.getElementById('totalCopies').textContent=totalCount();
-    const btn=document.getElementById('btn-'+id);
-    btn.textContent='✓ Kopierat!';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='📋 Kopiera brev';btn.classList.remove('copied');},2200);
-    showToast('✓ Brevet kopierat – klistra in i din mail-app!');
-  });
-}
+function copyMail(id){const l=LETTERS.find(x=>x.id===id);navigator.clipboard.writeText(l.body).then(()=>{const n=increment(id);document.getElementById('cnt-'+id).textContent=n;document.getElementById('totalCopies').textContent=totalCount();const btn=document.getElementById('btn-'+id);btn.textContent='✓ Kopierat!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='📋 Kopiera brev';btn.classList.remove('copied');},2200);showToast('✓ Brevet kopierat – klistra in i din mail-app!');});}
 function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');}
 function shareX(){window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent('Jag har skickat medborgarbrev till svenska myndigheter om mat, skola och hälsa. Gör du detsamma? @healwithandreas'),'_blank','width=600,height=400');}
 function shareLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('✓ Länk kopierad!'));}
